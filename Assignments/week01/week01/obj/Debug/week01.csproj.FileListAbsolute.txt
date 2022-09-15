@@ -1,0 +1,10 @@
+D:\02_C#\week01\week01\bin\Debug\week01.exe.config
+D:\02_C#\week01\week01\bin\Debug\week01.exe
+D:\02_C#\week01\week01\bin\Debug\week01.pdb
+D:\02_C#\week01\week01\obj\Debug\week01.csproj.AssemblyReference.cache
+D:\02_C#\week01\week01\obj\Debug\week01.Form1.resources
+D:\02_C#\week01\week01\obj\Debug\week01.Properties.Resources.resources
+D:\02_C#\week01\week01\obj\Debug\week01.csproj.GenerateResource.cache
+D:\02_C#\week01\week01\obj\Debug\week01.csproj.CoreCompileInputs.cache
+D:\02_C#\week01\week01\obj\Debug\week01.exe
+D:\02_C#\week01\week01\obj\Debug\week01.pdb
