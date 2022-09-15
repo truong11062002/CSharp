@@ -29,8 +29,11 @@
 
 
 <a name ="colab"></a>
-### 2. ASSSIGNMENTS
+### 2. Assignments
 
+#### Excercise 01
+
+[Thiết kế giao diện theo mẫu](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/week01)
 
 <a name ="QT"></a>
 ### 3. Quá trình trên lớp
