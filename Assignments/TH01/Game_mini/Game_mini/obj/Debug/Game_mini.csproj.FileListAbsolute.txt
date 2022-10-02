@@ -1,0 +1,12 @@
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\bin\Debug\Game_mini.exe.config
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\bin\Debug\Game_mini.exe
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\bin\Debug\Game_mini.pdb
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.csproj.AssemblyReference.cache
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Properties.Resources.resources
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.csproj.GenerateResource.cache
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.csproj.CoreCompileInputs.cache
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.exe
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.pdb
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Form1.resources
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Form2.resources
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.ChooseTopic.resources
