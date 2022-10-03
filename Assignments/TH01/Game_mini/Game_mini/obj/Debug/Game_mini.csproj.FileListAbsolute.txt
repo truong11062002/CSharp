@@ -10,3 +10,11 @@ C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.pdb
 C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Form1.resources
 C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Form2.resources
 C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.ChooseTopic.resources
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\bin\Debug\DotNetSkin.SkinControls.dll
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.csproj.CopyComplete
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Fruit.resources
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\bin\Debug\Interop.WMPLib.dll
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\bin\Debug\AxInterop.WMPLib.dll
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Interop.WMPLib.dll
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\AxInterop.WMPLib.dll
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.csproj.ResolveComReference.cache

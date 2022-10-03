@@ -30,20 +30,10 @@ namespace Game_mini
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.btn_Close = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.skinButton1 = new DotNetSkin.SkinControls.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btn_Close, "btn_Close");
-            this.btn_Close.ForeColor = System.Drawing.Color.Red;
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.UseVisualStyleBackColor = false;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Click_Close);
             // 
             // dataGridView1
             // 
@@ -52,14 +42,23 @@ namespace Game_mini
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // skinButton1
+            // 
+            resources.ApplyResources(this.skinButton1, "skinButton1");
+            this.skinButton1.ForeColor = System.Drawing.Color.Red;
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.UseVisualStyleBackColor = true;
+            this.skinButton1.Click += new System.EventHandler(this.btn_Click_Close);
             // 
             // Form2
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.skinButton1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_Close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -69,8 +68,7 @@ namespace Game_mini
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private DotNetSkin.SkinControls.SkinButton skinButton1;
     }
 }

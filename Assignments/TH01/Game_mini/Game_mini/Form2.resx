@@ -118,37 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Close.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="btn_Close.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 466</value>
-  </data>
-  <data name="btn_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 40</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn_Close.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btn_Close.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="&gt;&gt;btn_Close.Name" xml:space="preserve">
-    <value>btn_Close</value>
-  </data>
-  <data name="&gt;&gt;btn_Close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_Close.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btn_Close.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 12</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
@@ -168,6 +141,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="skinButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold, Italic</value>
+  </data>
+  <data name="skinButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 466</value>
+  </data>
+  <data name="skinButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 48</value>
+  </data>
+  <data name="skinButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="skinButton1.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;skinButton1.Name" xml:space="preserve">
+    <value>skinButton1</value>
+  </data>
+  <data name="&gt;&gt;skinButton1.Type" xml:space="preserve">
+    <value>DotNetSkin.SkinControls.SkinButton, DotNetSkin.SkinControls, Version=1.0.2265.17437, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;skinButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;skinButton1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

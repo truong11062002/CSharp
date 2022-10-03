@@ -80,5 +80,30 @@ namespace Game_mini
         {
             btn_Vehicle.BackColor = Color.Transparent;
         }
+
+
+        private void txt_Click_Fruit(object sender, EventArgs e)
+        {
+            Fruit f_Fruit = new Fruit();
+            f_Fruit.Show(this);
+        }
+
+        private void txt_Click_Vehicle(object sender, EventArgs e)
+        {
+            Vehicle f_Vehicle = new Vehicle();
+            f_Vehicle.Show(this);
+        }
+
+        private void txt_Click_Animal(object sender, EventArgs e)
+        {
+            Animal f_Animal = new Animal();
+            f_Animal.Show(this);
+        }
+
+        private void txt_Click_Occupation(object sender, EventArgs e)
+        {
+            Occupation f_Occupation = new Occupation();
+            f_Occupation.Show(this);
+        }
     }
 }

@@ -31,13 +31,14 @@ namespace Game_mini
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseTopic));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txt_Occupation = new System.Windows.Forms.Label();
+            this.txt_Animal = new System.Windows.Forms.Label();
+            this.text_Vehicle = new System.Windows.Forms.Label();
+            this.text_Fruit = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_Vehicle = new System.Windows.Forms.Button();
@@ -51,12 +52,25 @@ namespace Game_mini
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(971, 71);
             this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Location = new System.Drawing.Point(295, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(414, 45);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "CHỌN CHỦ ĐỀ CHO BÉ";
             // 
             // pictureBox1
             // 
@@ -87,10 +101,10 @@ namespace Game_mini
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txt_Occupation);
+            this.panel2.Controls.Add(this.txt_Animal);
+            this.panel2.Controls.Add(this.text_Vehicle);
+            this.panel2.Controls.Add(this.text_Fruit);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btn_Vehicle);
@@ -100,49 +114,57 @@ namespace Game_mini
             this.panel2.Size = new System.Drawing.Size(961, 501);
             this.panel2.TabIndex = 7;
             // 
-            // label4
+            // txt_Occupation
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Brown;
-            this.label4.Location = new System.Drawing.Point(594, 436);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 33);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "OCCUPATION";
+            this.txt_Occupation.AutoSize = true;
+            this.txt_Occupation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt_Occupation.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Occupation.ForeColor = System.Drawing.Color.Brown;
+            this.txt_Occupation.Location = new System.Drawing.Point(594, 436);
+            this.txt_Occupation.Name = "txt_Occupation";
+            this.txt_Occupation.Size = new System.Drawing.Size(226, 33);
+            this.txt_Occupation.TabIndex = 18;
+            this.txt_Occupation.Text = "OCCUPATION";
+            this.txt_Occupation.Click += new System.EventHandler(this.txt_Click_Occupation);
             // 
-            // label3
+            // txt_Animal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Brown;
-            this.label3.Location = new System.Drawing.Point(197, 445);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 33);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "ANIMAL";
+            this.txt_Animal.AutoSize = true;
+            this.txt_Animal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt_Animal.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Animal.ForeColor = System.Drawing.Color.Brown;
+            this.txt_Animal.Location = new System.Drawing.Point(197, 445);
+            this.txt_Animal.Name = "txt_Animal";
+            this.txt_Animal.Size = new System.Drawing.Size(140, 33);
+            this.txt_Animal.TabIndex = 17;
+            this.txt_Animal.Text = "ANIMAL";
+            this.txt_Animal.Click += new System.EventHandler(this.txt_Click_Animal);
             // 
-            // label2
+            // text_Vehicle
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Brown;
-            this.label2.Location = new System.Drawing.Point(621, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 33);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "VEHICLE";
+            this.text_Vehicle.AutoSize = true;
+            this.text_Vehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.text_Vehicle.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Vehicle.ForeColor = System.Drawing.Color.Brown;
+            this.text_Vehicle.Location = new System.Drawing.Point(621, 206);
+            this.text_Vehicle.Name = "text_Vehicle";
+            this.text_Vehicle.Size = new System.Drawing.Size(158, 33);
+            this.text_Vehicle.TabIndex = 16;
+            this.text_Vehicle.Text = "VEHICLE";
+            this.text_Vehicle.Click += new System.EventHandler(this.txt_Click_Vehicle);
             // 
-            // label1
+            // text_Fruit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Brown;
-            this.label1.Location = new System.Drawing.Point(197, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 33);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "FRUIT";
+            this.text_Fruit.AutoSize = true;
+            this.text_Fruit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.text_Fruit.Font = new System.Drawing.Font("Imprint MT Shadow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Fruit.ForeColor = System.Drawing.Color.Brown;
+            this.text_Fruit.Location = new System.Drawing.Point(197, 206);
+            this.text_Fruit.Name = "text_Fruit";
+            this.text_Fruit.Size = new System.Drawing.Size(115, 33);
+            this.text_Fruit.TabIndex = 15;
+            this.text_Fruit.Text = "FRUIT";
+            this.text_Fruit.Click += new System.EventHandler(this.txt_Click_Fruit);
             // 
             // button4
             // 
@@ -170,6 +192,7 @@ namespace Game_mini
             // 
             this.btn_Vehicle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Vehicle.BackgroundImage")));
             this.btn_Vehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Vehicle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Vehicle.Location = new System.Drawing.Point(549, 23);
             this.btn_Vehicle.Name = "btn_Vehicle";
             this.btn_Vehicle.Size = new System.Drawing.Size(299, 166);
@@ -182,14 +205,13 @@ namespace Game_mini
             this.btn_Fruit.BackColor = System.Drawing.Color.Transparent;
             this.btn_Fruit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Fruit.BackgroundImage")));
             this.btn_Fruit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Fruit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Fruit.Location = new System.Drawing.Point(113, 23);
             this.btn_Fruit.Name = "btn_Fruit";
             this.btn_Fruit.Size = new System.Drawing.Size(299, 166);
             this.btn_Fruit.TabIndex = 11;
             this.btn_Fruit.UseVisualStyleBackColor = false;
             this.btn_Fruit.Click += new System.EventHandler(this.btn_Click_Fruit);
-            this.btn_Fruit.MouseLeave += new System.EventHandler(this.shipBtn_Fruit_MouseLeave);
-            this.btn_Fruit.MouseHover += new System.EventHandler(this.shipBtn_Fruit_MouseHover);
             // 
             // ChooseTopic
             // 
@@ -205,6 +227,7 @@ namespace Game_mini
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChooseTopic";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -219,13 +242,14 @@ namespace Game_mini
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt_Occupation;
+        private System.Windows.Forms.Label txt_Animal;
+        private System.Windows.Forms.Label text_Vehicle;
+        private System.Windows.Forms.Label text_Fruit;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_Vehicle;
         private System.Windows.Forms.Button btn_Fruit;
+        private System.Windows.Forms.Label label1;
     }
 }

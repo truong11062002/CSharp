@@ -52,5 +52,15 @@ namespace Game_mini
             rank f_rank = new rank();
             f_rank.Show(this);
         }
+
+        private void pic_Click_Close(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
