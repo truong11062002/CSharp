@@ -61,17 +61,17 @@
     <Compile Include="ChooseTopic.Designer.cs">
       <DependentUpon>ChooseTopic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Vocab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Vocab.Designer.cs">
+      <DependentUpon>Vocab.cs</DependentUpon>
     </Compile>
     <Compile Include="Fruit.cs">
       <SubType>Form</SubType>
@@ -102,11 +102,11 @@
     <EmbeddedResource Include="ChooseTopic.resx">
       <DependentUpon>ChooseTopic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Vocab.resx">
+      <DependentUpon>Vocab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fruit.resx">
       <DependentUpon>Fruit.cs</DependentUpon>
@@ -119,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,6 +152,36 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dudu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xoai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhdao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuoi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dua.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
