@@ -105,5 +105,10 @@ namespace Game_mini
             Occupation f_Occupation = new Occupation();
             f_Occupation.Show(this);
         }
+
+        private void ChooseTopic_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

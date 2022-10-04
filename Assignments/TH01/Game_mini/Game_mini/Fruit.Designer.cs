@@ -39,11 +39,13 @@ namespace Game_mini
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Score = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txt_right = new System.Windows.Forms.Label();
             this.pic_Fruit = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Result = new System.Windows.Forms.RichTextBox();
             this.pic_Next = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Close)).BeginInit();
@@ -132,20 +134,20 @@ namespace Game_mini
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(784, 271);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 25);
+            this.label1.Size = new System.Drawing.Size(81, 23);
             this.label1.TabIndex = 13;
             this.label1.Text = "Score: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(784, 311);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.Size = new System.Drawing.Size(80, 23);
             this.label2.TabIndex = 14;
             this.label2.Text = "Right: ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -153,25 +155,26 @@ namespace Game_mini
             // txt_Score
             // 
             this.txt_Score.AutoSize = true;
-            this.txt_Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Score.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Score.Location = new System.Drawing.Point(865, 271);
             this.txt_Score.Name = "txt_Score";
-            this.txt_Score.Size = new System.Drawing.Size(23, 25);
+            this.txt_Score.Size = new System.Drawing.Size(24, 26);
             this.txt_Score.TabIndex = 15;
             this.txt_Score.Text = "0";
             // 
-            // label3
+            // txt_right
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(857, 311);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 25);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "0/5";
+            this.txt_right.AutoSize = true;
+            this.txt_right.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_right.Location = new System.Drawing.Point(857, 311);
+            this.txt_right.Name = "txt_right";
+            this.txt_right.Size = new System.Drawing.Size(24, 26);
+            this.txt_right.TabIndex = 16;
+            this.txt_right.Text = "0";
             // 
             // pic_Fruit
             // 
+            this.pic_Fruit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_Fruit.Location = new System.Drawing.Point(271, 74);
             this.pic_Fruit.Name = "pic_Fruit";
             this.pic_Fruit.Size = new System.Drawing.Size(457, 290);
@@ -212,6 +215,26 @@ namespace Game_mini
             this.pic_Next.TabStop = false;
             this.pic_Next.Click += new System.EventHandler(this.pic_Click_Next);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(899, 311);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 26);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "10";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(877, 310);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 26);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "/";
+            // 
             // Fruit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,11 +243,13 @@ namespace Game_mini
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(973, 599);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pic_Next);
             this.Controls.Add(this.txt_Result);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pic_Fruit);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txt_right);
             this.Controls.Add(this.txt_Score);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -263,10 +288,12 @@ namespace Game_mini
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txt_Score;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label txt_right;
         private System.Windows.Forms.PictureBox pic_Fruit;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox txt_Result;
         private System.Windows.Forms.PictureBox pic_Next;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }

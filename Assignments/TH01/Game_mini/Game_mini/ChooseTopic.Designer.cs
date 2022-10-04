@@ -226,6 +226,7 @@ namespace Game_mini
             this.Name = "ChooseTopic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChooseTopic";
+            this.Load += new System.EventHandler(this.ChooseTopic_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -40,6 +40,8 @@ namespace Game_mini
         {
             ChooseTopic f_Topic = new ChooseTopic();
             f_Topic.Show(this);
+
+            this.Hide();
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -61,6 +63,11 @@ namespace Game_mini
         private void txt_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
