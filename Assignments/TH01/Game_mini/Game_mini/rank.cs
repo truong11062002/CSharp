@@ -12,9 +12,15 @@ namespace Game_mini
 {
     public partial class rank : Form
     {
+        
         public rank()
         {
             InitializeComponent();
+        }
+
+        private void rank_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
