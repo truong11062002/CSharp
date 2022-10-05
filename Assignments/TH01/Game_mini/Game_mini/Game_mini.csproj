@@ -73,11 +73,11 @@
     <Compile Include="Vocab.Designer.cs">
       <DependentUpon>Vocab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fruit.cs">
+    <Compile Include="sharedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fruit.Designer.cs">
-      <DependentUpon>Fruit.cs</DependentUpon>
+    <Compile Include="sharedForm.Designer.cs">
+      <DependentUpon>sharedForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Occupation.cs">
       <SubType>Form</SubType>
@@ -105,11 +105,17 @@
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rank.resx">
+      <DependentUpon>rank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle.resx">
+      <DependentUpon>Vehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vocab.resx">
       <DependentUpon>Vocab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fruit.resx">
-      <DependentUpon>Fruit.cs</DependentUpon>
+    <EmbeddedResource Include="sharedForm.resx">
+      <DependentUpon>sharedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,6 +188,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duck.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sheep.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

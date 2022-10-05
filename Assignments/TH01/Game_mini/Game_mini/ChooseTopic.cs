@@ -39,7 +39,7 @@ namespace Game_mini
 
         private void btn_Click_Fruit(object sender, EventArgs e)
         {
-            Fruit f_Fruit = new Fruit();
+            sharedForm f_Fruit = new sharedForm("fruit");
             f_Fruit.Show(this);
         }
 
@@ -51,7 +51,7 @@ namespace Game_mini
 
         private void btn_Click_Animal(object sender, EventArgs e)
         {
-            Animal f_Animal = new Animal();
+            sharedForm f_Animal = new sharedForm("animal");
             f_Animal.Show(this);
         }
 
@@ -81,10 +81,9 @@ namespace Game_mini
             btn_Vehicle.BackColor = Color.Transparent;
         }
 
-
         private void txt_Click_Fruit(object sender, EventArgs e)
         {
-            Fruit f_Fruit = new Fruit();
+            sharedForm f_Fruit = new sharedForm("fruit");
             f_Fruit.Show(this);
         }
 
@@ -96,7 +95,7 @@ namespace Game_mini
 
         private void txt_Click_Animal(object sender, EventArgs e)
         {
-            Animal f_Animal = new Animal();
+            sharedForm f_Animal = new sharedForm("animal");
             f_Animal.Show(this);
         }
 
