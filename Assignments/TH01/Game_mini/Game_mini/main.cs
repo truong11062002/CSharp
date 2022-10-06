@@ -69,5 +69,25 @@ namespace Game_mini
         {
 
         }
+
+        private void txt_play_Mouse_Hover(object sender, EventArgs e)
+        {
+            txt_play.ForeColor = Color.DarkOrange;
+        }
+
+        private void txt_play_Mouse_Leave(object sender, EventArgs e)
+        {
+            txt_play.ForeColor = Color.DarkSlateGray;
+        }
+
+        private void txt_exit_Mouse_Hover(object sender, EventArgs e)
+        {
+            txt_exit.ForeColor = Color.DarkOrange;
+        }
+
+        private void txt_exit_Mouse_Leave(object sender, EventArgs e)
+        {
+            txt_exit.ForeColor = Color.DarkSlateGray;
+        }
     }
 }

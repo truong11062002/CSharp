@@ -45,7 +45,7 @@ namespace Game_mini
 
         private void btn_Click_Vehicle(object sender, EventArgs e)
         {
-            Vehicle f_Vehicle = new Vehicle();
+            sharedForm f_Vehicle = new sharedForm("vehicle");
             f_Vehicle.Show(this);
         }
 
@@ -57,7 +57,7 @@ namespace Game_mini
 
         private void btn_Click_Occupation(object sender, EventArgs e)
         {
-            Occupation f_Occupation = new Occupation();
+            sharedForm f_Occupation = new sharedForm("occupation");
             f_Occupation.Show(this);
         }
 
@@ -89,7 +89,7 @@ namespace Game_mini
 
         private void txt_Click_Vehicle(object sender, EventArgs e)
         {
-            Vehicle f_Vehicle = new Vehicle();
+            sharedForm f_Vehicle = new sharedForm("vehicle");
             f_Vehicle.Show(this);
         }
 
@@ -101,7 +101,7 @@ namespace Game_mini
 
         private void txt_Click_Occupation(object sender, EventArgs e)
         {
-            Occupation f_Occupation = new Occupation();
+            sharedForm f_Occupation = new sharedForm("occupation");
             f_Occupation.Show(this);
         }
 

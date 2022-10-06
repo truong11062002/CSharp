@@ -33,7 +33,7 @@ namespace Game_mini
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txt_play = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -48,7 +48,7 @@ namespace Game_mini
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txt_exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -106,20 +106,22 @@ namespace Game_mini
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pic_Click_Rank);
             // 
-            // label1
+            // txt_play
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(769, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 34);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Chơi game";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.txt_play.AutoSize = true;
+            this.txt_play.BackColor = System.Drawing.Color.Transparent;
+            this.txt_play.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt_play.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_play.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_play.Location = new System.Drawing.Point(769, 186);
+            this.txt_play.Name = "txt_play";
+            this.txt_play.Size = new System.Drawing.Size(163, 34);
+            this.txt_play.TabIndex = 3;
+            this.txt_play.Text = "Chơi game";
+            this.txt_play.Click += new System.EventHandler(this.label1_Click);
+            this.txt_play.MouseLeave += new System.EventHandler(this.txt_play_Mouse_Leave);
+            this.txt_play.MouseHover += new System.EventHandler(this.txt_play_Mouse_Hover);
             // 
             // pictureBox3
             // 
@@ -280,20 +282,22 @@ namespace Game_mini
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Click += new System.EventHandler(this.pic_Click_Close);
             // 
-            // label2
+            // txt_exit
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(763, 360);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 34);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Thoát game";
-            this.label2.Click += new System.EventHandler(this.txt_Click);
+            this.txt_exit.AutoSize = true;
+            this.txt_exit.BackColor = System.Drawing.Color.Transparent;
+            this.txt_exit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_exit.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_exit.Location = new System.Drawing.Point(763, 360);
+            this.txt_exit.Name = "txt_exit";
+            this.txt_exit.Size = new System.Drawing.Size(178, 34);
+            this.txt_exit.TabIndex = 21;
+            this.txt_exit.Text = "Thoát game";
+            this.txt_exit.Click += new System.EventHandler(this.txt_Click);
+            this.txt_exit.MouseLeave += new System.EventHandler(this.txt_exit_Mouse_Leave);
+            this.txt_exit.MouseHover += new System.EventHandler(this.txt_exit_Mouse_Hover);
             // 
             // main
             // 
@@ -303,7 +307,7 @@ namespace Game_mini
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(973, 599);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_exit);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
@@ -319,7 +323,7 @@ namespace Game_mini
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_play);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -353,7 +357,7 @@ namespace Game_mini
         #endregion
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txt_play;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -369,7 +373,7 @@ namespace Game_mini
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txt_exit;
     }
 }
 

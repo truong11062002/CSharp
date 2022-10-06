@@ -16,6 +16,10 @@ namespace Game_mini
         DataTable dt = new DataTable();
         DataTable dt_Fruit = new DataTable();
         DataTable dt_Animal = new DataTable();
+        DataTable dt_Vehicle = new DataTable();
+        DataTable dt_Occupation = new DataTable();
+
+
         Int32 currID = 0;
         Int32 num_right = 0;
         public int _score = 0;
@@ -37,6 +41,8 @@ namespace Game_mini
             InitializeComponent();
 
             this.category = category;
+
+            // ----> Datatable for fruit <-----
             dt_Fruit.Columns.Add("ID", typeof(int));
             dt_Fruit.Columns.Add("En", typeof(string));
 
@@ -52,7 +58,7 @@ namespace Game_mini
             dt_Fruit.Rows.Add(8, "papaya");
             dt_Fruit.Rows.Add(9, "pear");
 
-
+            // ----> Datatable for animal <-----
             dt_Animal.Columns.Add("ID", typeof(int));
             dt_Animal.Columns.Add("En", typeof(string));
 
@@ -67,14 +73,53 @@ namespace Game_mini
             dt_Animal.Rows.Add(8, "rabbit");
             dt_Animal.Rows.Add(9, "sheep");
 
+            // ----> Datatable for vehicle <-----
 
-            if(category == "animal")
+            dt_Vehicle.Columns.Add("ID", typeof(int));
+            dt_Vehicle.Columns.Add("En", typeof(string));
+
+            dt_Vehicle.Rows.Add(0, "bycycle");
+            dt_Vehicle.Rows.Add(1, "bus");
+            dt_Vehicle.Rows.Add(2, "car");
+            dt_Vehicle.Rows.Add(3, "motorcycle");
+            dt_Vehicle.Rows.Add(4, "scooter");
+            dt_Vehicle.Rows.Add(5, "subway");
+            dt_Vehicle.Rows.Add(6, "taxi");
+            dt_Vehicle.Rows.Add(7, "train");
+            dt_Vehicle.Rows.Add(8, "truck");
+            dt_Vehicle.Rows.Add(9, "van");
+            // ----> Datatable for occupation <-----
+
+            dt_Occupation.Columns.Add("ID", typeof(int));
+            dt_Occupation.Columns.Add("En", typeof(string));
+
+            dt_Occupation.Rows.Add(0, "builder");
+            dt_Occupation.Rows.Add(1, "carpenter");
+            dt_Occupation.Rows.Add(2, "dentist");
+            dt_Occupation.Rows.Add(3, "docter");
+            dt_Occupation.Rows.Add(4, "farmer");
+            dt_Occupation.Rows.Add(5, "policeman");
+            dt_Occupation.Rows.Add(6, "singer");
+            dt_Occupation.Rows.Add(7, "teacher");
+            dt_Occupation.Rows.Add(8, "pilot");
+            dt_Occupation.Rows.Add(9, "chef");
+
+            if (category == "animal")
             {
                 dt = dt_Animal;
             }
             else if(category == "fruit")
             {
                 dt = dt_Fruit;
+            }
+
+            else if (category == "vehicle")
+            {
+                dt = dt_Vehicle;
+            }
+            else if(category == "occupation")
+            {
+                dt = dt_Occupation;
             }
         }
 
@@ -138,9 +183,16 @@ namespace Game_mini
                 pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.cat;
             }
             
+            else if(this.category == "vehicle")
+            {
+                pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.bicycle;
+            }
+            else if(this.category == "occupation")
+            {
+                pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.builder;
+            }
 
         }
-
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -195,37 +247,114 @@ namespace Game_mini
                         pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.cat;
                         break;
                     case 1:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.dog;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.chicken;
                         break;
                     case 2:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.anhdao;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.cow;
                         break;
                     case 3:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.dua;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.dog;
                         break;
                     case 4:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.nho;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.duck;
                         break;
                     case 5:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.chanh;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.frog;
                         break;
                     case 6:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.xoai;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.horse;
                         break;
                     case 7:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.cam;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.pig;
                         break;
                     case 8:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.dudu;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.rabbit;
                         break;
                     case 9:
-                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.quale;
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.sheep;
                         break;
                     default:
                         break;
                 }
             }
-            
+
+            else if(this.category == "vehicle")
+            {
+                switch (currID)
+                {
+                    case 0:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.bicycle;
+                        break;
+                    case 1:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.bus;
+                        break;
+                    case 2:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.car;
+                        break;
+                    case 3:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.motorcycle;
+                        break;
+                    case 4:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.scooter;
+                        break;
+                    case 5:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.subway;
+                        break;
+                    case 6:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.taxi;
+                        break;
+                    case 7:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.train;
+                        break;
+                    case 8:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.truck;
+                        break;
+                    case 9:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.van;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (this.category == "occupation")
+            {
+                switch (currID)
+                {
+                    case 0:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.builder;
+                        break;
+                    case 1:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.carpenter;
+                        break;
+                    case 2:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.dentist;
+                        break;
+                    case 3:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.doctor;
+                        break;
+                    case 4:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.farmer;
+                        break;
+                    case 5:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.policeman;
+                        break;
+                    case 6:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.singer;
+                        break;
+                    case 7:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.teacher;
+                        break;
+                    case 8:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.pilot;
+                        break;
+                    case 9:
+                        pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.chef;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
         }
         private void pic_Click_Next(object sender, EventArgs e)
         {

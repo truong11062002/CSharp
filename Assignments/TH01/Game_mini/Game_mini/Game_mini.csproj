@@ -67,6 +67,11 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vocab.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,14 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -218,6 +218,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sheep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subway.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\van.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bicycle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\motorcycle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scooter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\builder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpenter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chef.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farmer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pilot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\policeman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
