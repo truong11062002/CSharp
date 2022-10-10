@@ -18,5 +18,5 @@ C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.csproj.Res
 C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.main.resources
 C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Vocab.resources
 C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.rank.resources
-C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.Vehicle.resources
 C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.sharedForm.resources
+C:\CS511.N11\Assignments\TH01\Game_mini\Game_mini\obj\Debug\Game_mini.EnterUserName.resources

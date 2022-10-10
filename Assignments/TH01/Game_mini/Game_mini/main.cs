@@ -32,15 +32,15 @@ namespace Game_mini
 
         private void label1_Click(object sender, EventArgs e)
         {
-            ChooseTopic f_Topic = new ChooseTopic();
-            f_Topic.Show(this);
+            EnterUserName f_EnterUserName = new EnterUserName();
+            f_EnterUserName.Show(this);
+            this.Hide();
         }
 
         private void pic_Click_Play(object sender, EventArgs e)
         {
-            ChooseTopic f_Topic = new ChooseTopic();
-            f_Topic.Show(this);
-
+            EnterUserName f_EnterUserName = new EnterUserName();
+            f_EnterUserName.Show(this);
             this.Hide();
         }
 
@@ -62,7 +62,7 @@ namespace Game_mini
 
         private void txt_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void main_Load(object sender, EventArgs e)

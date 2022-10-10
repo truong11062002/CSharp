@@ -41,6 +41,43 @@ namespace Game_mini
             dt.Rows.Add("9", "Fruit", "papaya", "Quả đu đủ");
             dt.Rows.Add("10", "Fruit", "pear", "Quả lê");
 
+
+            // ------> Animal <--------
+            dt.Rows.Add("1", "Animal", "cat", "Con mèo");
+            dt.Rows.Add("2", "Animal", "chicken", "Con gà");
+            dt.Rows.Add("3", "Animal", "cow", "Con bò sữa");
+            dt.Rows.Add("4", "Animal", "dog", "Con chó");
+            dt.Rows.Add("5", "Animal", "duck", "Con vịt");
+            dt.Rows.Add("6", "Animal", "frog", "Con ếch");
+            dt.Rows.Add("7", "Animal", "horse", "Con ngựa");
+            dt.Rows.Add("8", "Animal", "pig", "Con heo");
+            dt.Rows.Add("9", "Animal", "rabbit", "Con thỏ");
+            dt.Rows.Add("10", "Animal", "sheep", "Con cừu");
+
+            // ------> Vehicle <--------
+            dt.Rows.Add("1", "Vehicle", "bicycle", "Xe đạp");
+            dt.Rows.Add("2", "Vehicle", "bus", "Xe bus");
+            dt.Rows.Add("3", "Vehicle", "car", "Xe hơi");
+            dt.Rows.Add("4", "Vehicle", "motorcycle", "Xe moto");
+            dt.Rows.Add("5", "Vehicle", "scooter", "Xe tay ga");
+            dt.Rows.Add("6", "Vehicle", "subway", "Tàu điện ngầm");
+            dt.Rows.Add("7", "Vehicle", "taxi", "Taxi");
+            dt.Rows.Add("8", "Vehicle", "train", "Xe lửa");
+            dt.Rows.Add("9", "Vehicle", "truck", "Xe tải");
+            dt.Rows.Add("10", "Vehicle", "van", "Xe tải van");
+
+            // ------> Occupation <--------
+            dt.Rows.Add("1", "Occupation", "builder", "Người xây dựng");
+            dt.Rows.Add("2", "Occupation", "carpenter", "Thợ mọc");
+            dt.Rows.Add("3", "Occupation", "dentist", "Nha sĩ");
+            dt.Rows.Add("4", "Occupation", "docter", "Bác sĩ");
+            dt.Rows.Add("5", "Occupation", "farmer", "Nông dân");
+            dt.Rows.Add("6", "Occupation", "policeman", "Cảnh sát");
+            dt.Rows.Add("7", "Occupation", "singer", "Ca sĩ");
+            dt.Rows.Add("8", "Occupation", "teacher", "Giáo viên");
+            dt.Rows.Add("9", "Occupation", "pilot", "Phi công");
+            dt.Rows.Add("10", "Occupation", "chef", "Đầu bếp");
+
             dataGridView1.DataSource = dt;
         }
 
