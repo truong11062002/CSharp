@@ -26,5 +26,17 @@ namespace Game_mini
                 this.Hide();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Form f_main = System.Windows.Forms.Application.OpenForms["main"];
+            f_main.Show();
+            this.Hide();
+        }
     }
 }

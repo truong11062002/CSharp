@@ -91,7 +91,7 @@ namespace Game_mini
             this.lb_score1st_fruit.AutoSize = true;
             this.lb_score1st_fruit.BackColor = System.Drawing.Color.Transparent;
             this.lb_score1st_fruit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score1st_fruit.Location = new System.Drawing.Point(207, 146);
+            this.lb_score1st_fruit.Location = new System.Drawing.Point(247, 146);
             this.lb_score1st_fruit.Name = "lb_score1st_fruit";
             this.lb_score1st_fruit.Size = new System.Drawing.Size(86, 29);
             this.lb_score1st_fruit.TabIndex = 0;
@@ -136,7 +136,7 @@ namespace Game_mini
             this.lb_score2nd_fruit.AutoSize = true;
             this.lb_score2nd_fruit.BackColor = System.Drawing.Color.Transparent;
             this.lb_score2nd_fruit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score2nd_fruit.Location = new System.Drawing.Point(207, 214);
+            this.lb_score2nd_fruit.Location = new System.Drawing.Point(247, 214);
             this.lb_score2nd_fruit.Name = "lb_score2nd_fruit";
             this.lb_score2nd_fruit.Size = new System.Drawing.Size(86, 29);
             this.lb_score2nd_fruit.TabIndex = 4;
@@ -147,7 +147,7 @@ namespace Game_mini
             this.lb_score3rd_fruit.AutoSize = true;
             this.lb_score3rd_fruit.BackColor = System.Drawing.Color.Transparent;
             this.lb_score3rd_fruit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score3rd_fruit.Location = new System.Drawing.Point(207, 282);
+            this.lb_score3rd_fruit.Location = new System.Drawing.Point(247, 282);
             this.lb_score3rd_fruit.Name = "lb_score3rd_fruit";
             this.lb_score3rd_fruit.Size = new System.Drawing.Size(86, 29);
             this.lb_score3rd_fruit.TabIndex = 5;
@@ -247,7 +247,7 @@ namespace Game_mini
             this.lb_score1st_animal.AutoSize = true;
             this.lb_score1st_animal.BackColor = System.Drawing.Color.Transparent;
             this.lb_score1st_animal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score1st_animal.Location = new System.Drawing.Point(812, 146);
+            this.lb_score1st_animal.Location = new System.Drawing.Point(854, 146);
             this.lb_score1st_animal.Name = "lb_score1st_animal";
             this.lb_score1st_animal.Size = new System.Drawing.Size(86, 29);
             this.lb_score1st_animal.TabIndex = 15;
@@ -302,7 +302,7 @@ namespace Game_mini
             this.lb_score3rd_animal.AutoSize = true;
             this.lb_score3rd_animal.BackColor = System.Drawing.Color.Transparent;
             this.lb_score3rd_animal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score3rd_animal.Location = new System.Drawing.Point(812, 282);
+            this.lb_score3rd_animal.Location = new System.Drawing.Point(854, 282);
             this.lb_score3rd_animal.Name = "lb_score3rd_animal";
             this.lb_score3rd_animal.Size = new System.Drawing.Size(86, 29);
             this.lb_score3rd_animal.TabIndex = 20;
@@ -313,7 +313,7 @@ namespace Game_mini
             this.lb_score2nd_animal.AutoSize = true;
             this.lb_score2nd_animal.BackColor = System.Drawing.Color.Transparent;
             this.lb_score2nd_animal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score2nd_animal.Location = new System.Drawing.Point(812, 214);
+            this.lb_score2nd_animal.Location = new System.Drawing.Point(854, 214);
             this.lb_score2nd_animal.Name = "lb_score2nd_animal";
             this.lb_score2nd_animal.Size = new System.Drawing.Size(86, 29);
             this.lb_score2nd_animal.TabIndex = 19;
@@ -346,7 +346,7 @@ namespace Game_mini
             this.lb_score1st_vehicle.AutoSize = true;
             this.lb_score1st_vehicle.BackColor = System.Drawing.Color.Transparent;
             this.lb_score1st_vehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score1st_vehicle.Location = new System.Drawing.Point(207, 409);
+            this.lb_score1st_vehicle.Location = new System.Drawing.Point(246, 409);
             this.lb_score1st_vehicle.Name = "lb_score1st_vehicle";
             this.lb_score1st_vehicle.Size = new System.Drawing.Size(86, 29);
             this.lb_score1st_vehicle.TabIndex = 24;
@@ -401,7 +401,7 @@ namespace Game_mini
             this.lb_score3rd_vehicle.AutoSize = true;
             this.lb_score3rd_vehicle.BackColor = System.Drawing.Color.Transparent;
             this.lb_score3rd_vehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score3rd_vehicle.Location = new System.Drawing.Point(207, 545);
+            this.lb_score3rd_vehicle.Location = new System.Drawing.Point(246, 545);
             this.lb_score3rd_vehicle.Name = "lb_score3rd_vehicle";
             this.lb_score3rd_vehicle.Size = new System.Drawing.Size(86, 29);
             this.lb_score3rd_vehicle.TabIndex = 29;
@@ -412,7 +412,7 @@ namespace Game_mini
             this.lb_score2nd_vehicle.AutoSize = true;
             this.lb_score2nd_vehicle.BackColor = System.Drawing.Color.Transparent;
             this.lb_score2nd_vehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score2nd_vehicle.Location = new System.Drawing.Point(207, 477);
+            this.lb_score2nd_vehicle.Location = new System.Drawing.Point(246, 477);
             this.lb_score2nd_vehicle.Name = "lb_score2nd_vehicle";
             this.lb_score2nd_vehicle.Size = new System.Drawing.Size(86, 29);
             this.lb_score2nd_vehicle.TabIndex = 28;
@@ -445,7 +445,7 @@ namespace Game_mini
             this.lb_score1st_occupation.AutoSize = true;
             this.lb_score1st_occupation.BackColor = System.Drawing.Color.Transparent;
             this.lb_score1st_occupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score1st_occupation.Location = new System.Drawing.Point(812, 404);
+            this.lb_score1st_occupation.Location = new System.Drawing.Point(854, 404);
             this.lb_score1st_occupation.Name = "lb_score1st_occupation";
             this.lb_score1st_occupation.Size = new System.Drawing.Size(86, 29);
             this.lb_score1st_occupation.TabIndex = 33;
@@ -500,7 +500,7 @@ namespace Game_mini
             this.lb_score3rd_occupation.AutoSize = true;
             this.lb_score3rd_occupation.BackColor = System.Drawing.Color.Transparent;
             this.lb_score3rd_occupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score3rd_occupation.Location = new System.Drawing.Point(812, 540);
+            this.lb_score3rd_occupation.Location = new System.Drawing.Point(854, 540);
             this.lb_score3rd_occupation.Name = "lb_score3rd_occupation";
             this.lb_score3rd_occupation.Size = new System.Drawing.Size(86, 29);
             this.lb_score3rd_occupation.TabIndex = 38;
@@ -511,7 +511,7 @@ namespace Game_mini
             this.lb_score2nd_occupation.AutoSize = true;
             this.lb_score2nd_occupation.BackColor = System.Drawing.Color.Transparent;
             this.lb_score2nd_occupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_score2nd_occupation.Location = new System.Drawing.Point(812, 472);
+            this.lb_score2nd_occupation.Location = new System.Drawing.Point(854, 472);
             this.lb_score2nd_occupation.Name = "lb_score2nd_occupation";
             this.lb_score2nd_occupation.Size = new System.Drawing.Size(86, 29);
             this.lb_score2nd_occupation.TabIndex = 37;
