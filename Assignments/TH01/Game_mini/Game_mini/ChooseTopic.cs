@@ -12,9 +12,11 @@ namespace Game_mini
 {
     public partial class ChooseTopic : Form
     {
-        public ChooseTopic()
+        public string username;
+        public ChooseTopic(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void btn_Click_Close_Topic(object sender, EventArgs e)
@@ -25,6 +27,8 @@ namespace Game_mini
         private void pic_Click_Back(object sender, EventArgs e)
         {
             this.Close();
+            System.Windows.Forms.Form f_main = System.Windows.Forms.Application.OpenForms["main"];
+            f_main.Show();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -39,25 +43,25 @@ namespace Game_mini
 
         private void btn_Click_Fruit(object sender, EventArgs e)
         {
-            sharedForm f_Fruit = new sharedForm("fruit");
+            sharedForm f_Fruit = new sharedForm("fruit", username);
             f_Fruit.Show(this);
         }
 
         private void btn_Click_Vehicle(object sender, EventArgs e)
         {
-            sharedForm f_Vehicle = new sharedForm("vehicle");
+            sharedForm f_Vehicle = new sharedForm("vehicle", username);
             f_Vehicle.Show(this);
         }
 
         private void btn_Click_Animal(object sender, EventArgs e)
         {
-            sharedForm f_Animal = new sharedForm("animal");
+            sharedForm f_Animal = new sharedForm("animal", username);
             f_Animal.Show(this);
         }
 
         private void btn_Click_Occupation(object sender, EventArgs e)
         {
-            sharedForm f_Occupation = new sharedForm("occupation");
+            sharedForm f_Occupation = new sharedForm("occupation", username);
             f_Occupation.Show(this);
         }
 
@@ -83,31 +87,31 @@ namespace Game_mini
 
         private void txt_Click_Fruit(object sender, EventArgs e)
         {
-            sharedForm f_Fruit = new sharedForm("fruit");
+            sharedForm f_Fruit = new sharedForm("fruit", username);
             f_Fruit.Show(this);
         }
 
         private void txt_Click_Vehicle(object sender, EventArgs e)
         {
-            sharedForm f_Vehicle = new sharedForm("vehicle");
+            sharedForm f_Vehicle = new sharedForm("vehicle", username);
             f_Vehicle.Show(this);
         }
 
         private void txt_Click_Animal(object sender, EventArgs e)
         {
-            sharedForm f_Animal = new sharedForm("animal");
+            sharedForm f_Animal = new sharedForm("animal", username);
             f_Animal.Show(this);
         }
 
         private void txt_Click_Occupation(object sender, EventArgs e)
         {
-            sharedForm f_Occupation = new sharedForm("occupation");
+            sharedForm f_Occupation = new sharedForm("occupation", username);
             f_Occupation.Show(this);
         }
 
         private void ChooseTopic_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

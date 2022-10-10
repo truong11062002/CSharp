@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Game_mini
 {
@@ -19,7 +20,7 @@ namespace Game_mini
         DataTable dt_Vehicle = new DataTable();
         DataTable dt_Occupation = new DataTable();
 
-
+        DataTable dt_Rank = new DataTable();
         Int32 currID = 0;
         Int32 num_right = 0;
         public int _score = 0;
@@ -36,11 +37,13 @@ namespace Game_mini
             }
         }
 
-        public sharedForm(string category)
+        
+        public sharedForm(string category, string username)
         {
             InitializeComponent();
 
             this.category = category;
+            this.username = username;
 
             // ----> Datatable for fruit <-----
             dt_Fruit.Columns.Add("ID", typeof(int));
@@ -78,7 +81,7 @@ namespace Game_mini
             dt_Vehicle.Columns.Add("ID", typeof(int));
             dt_Vehicle.Columns.Add("En", typeof(string));
 
-            dt_Vehicle.Rows.Add(0, "bycycle");
+            dt_Vehicle.Rows.Add(0, "bicycle");
             dt_Vehicle.Rows.Add(1, "bus");
             dt_Vehicle.Rows.Add(2, "car");
             dt_Vehicle.Rows.Add(3, "motorcycle");
@@ -124,6 +127,7 @@ namespace Game_mini
         }
 
         public string category;
+        public string username;
         private void pic_Close_Fruit(object sender, EventArgs e)
         {
             
@@ -141,17 +145,17 @@ namespace Game_mini
 
         private void pic_Click_Home(object sender, EventArgs e)
         {
-            this.Hide();
-            System.Windows.Forms.Form f_Main = System.Windows.Forms.Application.OpenForms["main"];
-            f_Main.Show();
+            this.Close();
+            main f_main = new main();
+            f_main.Show();
         }
 
         private void pic_Click_Back(object sender, EventArgs e)
         {
             this.Hide();
             System.Windows.Forms.Form f_chooseTopic = System.Windows.Forms.Application.OpenForms["ChooseTopic"];
-            //ChooseTopic f_chooseTopic = new ChooseTopic();
             f_chooseTopic.Show();
+            WMPMusic.Ctlcontrols.stop();
         }
 
         public void pic_Volume_Click(object sender, EventArgs e)
@@ -165,15 +169,16 @@ namespace Game_mini
         {
             pic_Volume.Visible = true;
             pic_Mute.Visible = false;
-            WMPMusic.URL = "Faded.mp3"; 
+            WMPMusic.URL = "babyshark.mp3";
         }
 
+        
         private void Fruit_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            //WMPMusic.URL = "Faded.mp3";
+            WMPMusic.URL = "babyshark.mp3";
 
-            if(this.category == "fruit")
+            if (this.category == "fruit")
             {
                 pic_Fruit.BackgroundImage = global::Game_mini.Properties.Resources.tao;
             }
@@ -366,7 +371,16 @@ namespace Game_mini
             else
             {
                 string temp = "Chúc mừng bạn đã hoàn thành bài test với kết quả: " + txt_right.Text + "/ 10 và số điểm đạt được là: " + txt_Score.Text;
-                MessageBox.Show(temp, "Result", MessageBoxButtons.OKCancel);
+                DialogResult inform = MessageBox.Show(temp, "Result", MessageBoxButtons.OKCancel);
+
+                if (inform == DialogResult.OK)
+                {
+                    this.Close();
+                }
+                else
+                {
+
+                }
             }
         }
       
@@ -374,8 +388,6 @@ namespace Game_mini
         {
             return Convert.ToString(dt.Rows[ID][1]);
         }
-
-        
         private void txt_Enter_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == (char)Keys.Enter)
@@ -397,14 +409,252 @@ namespace Game_mini
                     txt_Score.Text = Convert.ToString(score);
                     txt_right.Text = Convert.ToString(num_right);
                     txt_Result.Clear();
-
                     ChangeImage(currID);
                 }
                 else
                 {
                     string temp = "Chúc mừng bạn đã hoàn thành bài test với kết quả: " + txt_right.Text + "/ 10 và số điểm đạt được là: " + txt_Score.Text;
-                    MessageBox.Show(temp, "Result", MessageBoxButtons.OKCancel);
+                    switch (this.category)
+                    {
+                        case "fruit":
+                            {
+                                string s1_fruit = Properties.Settings.Default.fruit_1st;
+                                string s2_fruit = Properties.Settings.Default.fruit_2nd;
+                                string s3_fruit = Properties.Settings.Default.fruit_3rd;
+                                int score1_fruit = 0;
+                                int score2_fruit = 0;
+                                int score3_fruit = 0;
+                                if (s1_fruit.Length > 1)
+                                {
+                                    string[] strscore = s1_fruit.Split('_');
+                                    score1_fruit = Convert.ToInt32(strscore[strscore.Length - 1]);
+                                }
+                                if (s2_fruit.Length > 1)
+                                {
+                                    string[] strscore = s2_fruit.Split('_');
+                                    score2_fruit = Convert.ToInt32(strscore.Length - 1);
+                                }
+                                if (s3_fruit.Length > 1)
+                                {
+                                    string[] strscore = s3_fruit.Split('_');
+                                    score3_fruit = Convert.ToInt32(strscore.Length - 1);
+                                }
+                                if (score >= score1_fruit)
+                                {
+                                    Properties.Settings.Default.fruit_3rd = Properties.Settings.Default.fruit_2nd;
+                                    Properties.Settings.Default.fruit_2nd = Properties.Settings.Default.fruit_1st;
+                                    Properties.Settings.Default.fruit_1st = username + "_" + score.ToString();
 
+                                }
+                                else if (score >= score2_fruit)
+                                {
+                                    Properties.Settings.Default.fruit_3rd = Properties.Settings.Default.fruit_2nd;
+                                    if (username == "")
+                                    {
+                                        Properties.Settings.Default.fruit_2nd = "unnamed player_" + score.ToString();
+                                    }
+                                    else
+                                    {
+                                        Properties.Settings.Default.fruit_2nd = username + "_" + score.ToString();
+                                    }
+
+                                }
+                                else if (score >= score3_fruit)
+                                {
+                                    if (username == "")
+                                    {
+                                        Properties.Settings.Default.fruit_3rd = "unnamed player_" + score.ToString();
+                                    }
+                                    else
+                                    {
+                                        Properties.Settings.Default.fruit_3rd = username + "_" + score.ToString();
+                                    }
+                                }
+                                Properties.Settings.Default.Save();
+                            }
+                            break;
+                        case "vehicle":
+                            {
+                                string s1_vehicle = Properties.Settings.Default.vehicle_1st;
+                                string s2_vehicle = Properties.Settings.Default.vehicle_2nd;
+                                string s3_vehicle = Properties.Settings.Default.vehicle_3rd;
+                                int score1_vehicle = 0;
+                                int score2_vehicle = 0;
+                                int score3_vehicle = 0;
+                                if (s1_vehicle.Length > 1)
+                                {
+                                    string[] strscore = s1_vehicle.Split('_');
+                                    score1_vehicle = Convert.ToInt32(strscore[strscore.Length - 1]);
+                                }
+                                if (s2_vehicle.Length > 1)
+                                {
+                                    string[] strscore = s2_vehicle.Split('_');
+                                    score2_vehicle = Convert.ToInt32(strscore.Length - 1);
+                                }
+                                if (s3_vehicle.Length > 1)
+                                {
+                                    string[] strscore = s3_vehicle.Split('_');
+                                    score3_vehicle = Convert.ToInt32(strscore.Length - 1);
+                                }
+                                if (score >= score1_vehicle)
+                                {
+                                    Properties.Settings.Default.vehicle_3rd = Properties.Settings.Default.vehicle_2nd;
+                                    Properties.Settings.Default.vehicle_2nd = Properties.Settings.Default.vehicle_1st;
+                                    Properties.Settings.Default.vehicle_1st = username + "_" + score.ToString();
+                                }
+                                else if (score >= score2_vehicle)
+                                {
+                                    Properties.Settings.Default.vehicle_3rd = Properties.Settings.Default.vehicle_2nd;
+                                    if (username == "")
+                                    {
+                                        Properties.Settings.Default.vehicle_2nd = "unnamed player_" + score.ToString();
+                                    }
+                                    else
+                                    {
+                                        Properties.Settings.Default.vehicle_2nd = username + "_" + score.ToString();
+                                    }
+
+                                }
+                                else if (score >= score3_vehicle)
+                                {
+                                    if (username == "")
+                                    {
+                                        Properties.Settings.Default.vehicle_3rd = "unnamed player_" + score.ToString();
+                                    }
+                                    else
+                                    {
+                                        Properties.Settings.Default.vehicle_3rd = username + "_" + score.ToString();
+                                    }
+                                }
+                                Properties.Settings.Default.Save();
+                            }
+                            
+                            break;
+                        case "animal":
+                            {
+                                string s1_animal = Properties.Settings.Default.animal_1st;
+                                string s2_animal = Properties.Settings.Default.animal_2nd;
+                                string s3_animal = Properties.Settings.Default.animal_3rd;
+                                int score1_animal = 0;
+                                int score2_animal = 0;
+                                int score3_animal = 0;
+                                if (s1_animal.Length > 1)
+                                {
+                                    string[] strscore = s1_animal.Split('_');
+                                    score1_animal = Convert.ToInt32(strscore[strscore.Length - 1]);
+                                }
+                                if (s2_animal.Length > 1)
+                                {
+                                    string[] strscore = s2_animal.Split('_');
+                                    score2_animal = Convert.ToInt32(strscore.Length - 1);
+                                }
+                                if (s3_animal.Length > 1)
+                                {
+                                    string[] strscore = s3_animal.Split('_');
+                                    score3_animal = Convert.ToInt32(strscore.Length - 1);
+                                }
+                                if (score >= score1_animal)
+                                {
+                                    Properties.Settings.Default.animal_3rd = Properties.Settings.Default.animal_2nd;
+                                    Properties.Settings.Default.animal_2nd = Properties.Settings.Default.animal_1st;
+                                    Properties.Settings.Default.animal_1st = username + "_" + score.ToString();
+
+                                }
+                                else if (score >= score2_animal)
+                                {
+                                    Properties.Settings.Default.animal_3rd = Properties.Settings.Default.animal_2nd;
+                                    if (username == "")
+                                    {
+                                        Properties.Settings.Default.animal_2nd = "unnamed player_" + score.ToString();
+                                    }
+                                    else
+                                    {
+                                        Properties.Settings.Default.animal_2nd = username + "_" + score.ToString();
+                                    }
+
+                                }
+                                else if (score >= score3_animal)
+                                {
+                                    if (username == "")
+                                    {
+                                        Properties.Settings.Default.animal_3rd = "unnamed player_" + score.ToString();
+                                    }
+                                    else
+                                    {
+                                        Properties.Settings.Default.animal_3rd = username + "_" + score.ToString();
+                                    }
+                                }
+                                Properties.Settings.Default.Save();
+                            }
+                            break;
+                        case "occupation":
+                            string s1_occupation = Properties.Settings.Default.occupation_1st;
+                            string s2_occupation = Properties.Settings.Default.occupation_2nd;
+                            string s3_occupation = Properties.Settings.Default.occupation_3rd;
+                            int score1_occupation = 0;
+                            int score2_occupation = 0;
+                            int score3_occupation = 0;
+                            if (s1_occupation.Length > 1)
+                            {
+                                string[] strscore = s1_occupation.Split('_');
+                                score1_occupation = Convert.ToInt32(strscore[strscore.Length - 1]);
+                            }
+                            if (s2_occupation.Length > 1)
+                            {
+                                string[] strscore = s2_occupation.Split('_');
+                                score2_occupation = Convert.ToInt32(strscore.Length - 1);
+                            }
+                            if (s3_occupation.Length > 1)
+                            {
+                                string[] strscore = s3_occupation.Split('_');
+                                score3_occupation = Convert.ToInt32(strscore.Length - 1);
+                            }
+                            if (score >= score1_occupation)
+                            {
+                                Properties.Settings.Default.occupation_3rd = Properties.Settings.Default.occupation_2nd;
+                                Properties.Settings.Default.occupation_2nd = Properties.Settings.Default.occupation_1st;
+                                Properties.Settings.Default.occupation_1st = username + "_" + score.ToString();
+
+                            }
+                            else if (score >= score2_occupation)
+                            {
+                                Properties.Settings.Default.occupation_3rd = Properties.Settings.Default.occupation_2nd;
+                                if (username == "")
+                                {
+                                    Properties.Settings.Default.occupation_2nd = "unnamed player_" + score.ToString();
+                                }
+                                else
+                                {
+                                    Properties.Settings.Default.occupation_2nd = username + "_" + score.ToString();
+                                }
+
+                            }
+                            else if (score >= score3_occupation)
+                            {
+                                if (username == "")
+                                {
+                                    Properties.Settings.Default.occupation_3rd = "unnamed player_" + score.ToString();
+                                }
+                                else
+                                {
+                                    Properties.Settings.Default.occupation_3rd = username + "_" + score.ToString();
+                                }
+                            }
+                            Properties.Settings.Default.Save();
+                            break;
+                        default:
+                            break;
+                    }
+
+                    DialogResult inform = MessageBox.Show(temp, "Result", MessageBoxButtons.OKCancel);
+                    if(inform == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
         }
