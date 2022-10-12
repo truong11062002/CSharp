@@ -31,12 +31,22 @@
 <a name ="colab"></a>
 ### 2. Assignments
 
-#### Excercise 01
+### Excercise 01: Mini game learn english for kids
 
-[Thiết kế giao diện theo mẫu](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/week01)
+[Mini game learn english for kids](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/TH01)
 
+Mô tả:
+* Game học từ vựng tiếng anh theo chủ đề: fruit, animal, vehicle, occupation 
+* Ý tưởng chơi game: hiển thị ảnh và yêu cầu nhập vào 1 từ tiếng Anh chỉ đối tượng trong ảnh -> kết quả đúng sai và điểm số.
+* Game dành cho thiếu nhi nên cần chú ý về giao diện, hình ảnh trong game sinh động, dễ thương.
+* Chất lượng hình ảnh: rõ ràng, sắc nét, chân thực, dễ nhận biết nhưng phải đẹp, sinh động.
+
+![homescreen](https://i.imgur.com/z1i60kw.png)
+
+### Excercise 02: Shopping online
 <a name ="QT"></a>
 ### 3. Quá trình trên lớp
+[Thiết kế giao diện theo mẫu](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/week01)
 
 ## GIẢNG VIÊN HƯỚNG DẪN
 <a name="giangvien"></a>
