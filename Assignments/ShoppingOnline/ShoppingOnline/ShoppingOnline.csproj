@@ -46,16 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control_Custom\Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_Custom\Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\Data_Provider.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="HomeScreen.cs" />
+    <Compile Include="ProductScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductScreen.Designer.cs">
+      <DependentUpon>ProductScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\pants.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pants.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Control_Custom\Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductScreen.resx">
+      <DependentUpon>ProductScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +90,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Resources\pants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>pants.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +106,168 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant39.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant42.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant47.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant52.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant53.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant54.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pant27.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
