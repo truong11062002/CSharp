@@ -36,7 +36,7 @@ namespace ShoppingOnline
 
         private void Man_Move(object sender, MouseEventArgs e)
         {
-            
+
             lb_man.ForeColor = Color.White;
         }
 
@@ -47,12 +47,12 @@ namespace ShoppingOnline
 
         private void pn_man_MouseMove(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void pn_man_MouseLeave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void onClickMan(object sender, EventArgs e)
@@ -68,6 +68,8 @@ namespace ShoppingOnline
 
         private void main_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'shoppingOnlineDataSet.PRODUCT' table. You can move, or remove it, as needed.
+            this.pRODUCTTableAdapter.FillBy(this.shoppingOnlineDataSet.PRODUCT);
             showItem();
         }
 
@@ -80,7 +82,7 @@ namespace ShoppingOnline
             pn_detail.Visible = false;
             pn_detail.Controls.Clear();
             Loading();
-            
+
         }
 
         private void Women_move(object sender, MouseEventArgs e)
@@ -93,7 +95,7 @@ namespace ShoppingOnline
             lb_women.ForeColor = Color.Black;
         }
 
-        
+
 
         private void sw_move(object sender, MouseEventArgs e)
         {
@@ -112,8 +114,8 @@ namespace ShoppingOnline
 
         private void Loading()
         {
-            string query = "select * from PRODUCT where PRODUCT_ID like '"+State+"%'";
-            
+            string query = "select * from PRODUCT where PRODUCT_ID like '" + State + "%'";
+
             Data_Provider provider = new Data_Provider();
             dt = new DataTable();
             dt = provider.ExecuteQuery(query);
@@ -124,10 +126,29 @@ namespace ShoppingOnline
             lb_pant.ForeColor = Color.Blue;
         }
 
-        
+
         private void pant_leave(object sender, EventArgs e)
         {
             lb_pant.ForeColor = Color.Black;
+        }
+        private void jacket_leave(object sender, EventArgs e)
+        {
+            lb_jacket.ForeColor = Color.Black;
+        }
+
+        private void jacket_move(object sender, MouseEventArgs e)
+        {
+            lb_jacket.ForeColor = Color.Blue;
+        }
+
+        private void ts_move(object sender, MouseEventArgs e)
+        {
+            lb_ts.ForeColor = Color.Blue;
+        }
+
+        private void ts_leave(object sender, EventArgs e)
+        {
+            lb_ts.ForeColor = Color.Black;
         }
         private void showItem()
         {
@@ -141,7 +162,7 @@ namespace ShoppingOnline
                 int price = Convert.ToInt32(dt.Rows[i]["PRODUCT_PRICE"]);
 
                 Control_Custom.Item it = new Control_Custom.Item(id, name, price.ToString());
-                
+
                 it.btn_detail.Click += new EventHandler(ClickDetail);
                 flowLayoutPanel1.Controls.Add(it);
             }
@@ -149,10 +170,10 @@ namespace ShoppingOnline
 
         private void ClickDetail(object sender, EventArgs e)
         {
-            
+
             CButton bt = (CButton)sender;
             DetailProduct dp = new DetailProduct(bt.Name);
-            
+
             pn_detail.Controls.Add(dp);
             pn_detail.Visible = true;
         }
@@ -160,7 +181,7 @@ namespace ShoppingOnline
         {
             prevState = State;
             State = "pant";
-            
+
             Loading();
             showItem();
         }
@@ -172,7 +193,21 @@ namespace ShoppingOnline
             Loading();
             showItem();
         }
+        private void clickJacket(object sender, EventArgs e)
+        {
+            prevState = State;
+            State = "jacket";
+            Loading();
+            showItem();
+        }
 
+        private void clickTs(object sender, EventArgs e)
+        {
+            prevState = State;
+            State = "ts";
+            Loading();
+            showItem();
+        }
         private DataTable SearchProduct(string txt_search)
         {
             string query = "select * from PRODUCT where PRODUCT_NAME like '%" + txt_search + "%'";
@@ -187,7 +222,7 @@ namespace ShoppingOnline
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < dt_search.Rows.Count; i++)
             {
-                
+
                 string id = dt_search.Rows[i]["PRODUCT_ID"].ToString();
                 id = id.Replace(" ", "");
 
@@ -204,7 +239,41 @@ namespace ShoppingOnline
         private void onClickSearch(object sender, EventArgs e)
         {
             dt_search = SearchProduct(txt_search.Text);
-            ShowProductSearch(dt_search);
+            if (dt_search.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có sản phẩm bạn cần tìm!");
+            }
+            else
+            {
+                ShowProductSearch(dt_search);
+            }
+        }
+
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.pRODUCTTableAdapter.FillBy(this.shoppingOnlineDataSet.PRODUCT);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void valueChangeCountry(object sender, EventArgs e)
+        {
+            if(cb_filter.Text.ToString() == "Vietnam")
+            {
+                MessageBox.Show("Vietnam");
+            }
+
+            if (cb_filter.Text.ToString() == "Thailand")
+            {
+                MessageBox.Show("Thailand");
+            }
         }
     }
 }
