@@ -8,3 +8,6 @@ C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.exe
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.pdb
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.main.resources
+C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Control_Custom.Item.resources
+C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Resources.pants.resources
+C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Control_Custom.DetailProduct.resources
