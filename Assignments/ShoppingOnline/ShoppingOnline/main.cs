@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShoppingOnline.Control_Custom;
 
 namespace ShoppingOnline
 {
@@ -17,8 +18,10 @@ namespace ShoppingOnline
         public bool isClicked_Women = false;
         public string prevState = "";
         public string State = "pant";
+        static DataTable dt_search;
 
-        public DataTable dt;
+
+        static DataTable dt;
 
         public main()
         {
@@ -39,7 +42,6 @@ namespace ShoppingOnline
 
         private void Man_Leave(object sender, EventArgs e)
         {
-            
             lb_man.ForeColor = Color.Black;
         }
 
@@ -57,6 +59,11 @@ namespace ShoppingOnline
         {
             isClicked_Man = !isClicked_Man;
             pn_man.Visible = isClicked_Man;
+
+            // Load and show item for each image
+            pn_detail.Visible = false;
+            pn_detail.Controls.Clear();
+            Loading();
         }
 
         private void main_Load(object sender, EventArgs e)
@@ -68,6 +75,12 @@ namespace ShoppingOnline
         {
             isClicked_Women = !isClicked_Women;
             pn_women.Visible = isClicked_Women;
+
+            // Load and show item for each image
+            pn_detail.Visible = false;
+            pn_detail.Controls.Clear();
+            Loading();
+            
         }
 
         private void Women_move(object sender, MouseEventArgs e)
@@ -80,11 +93,7 @@ namespace ShoppingOnline
             lb_women.ForeColor = Color.Black;
         }
 
-        private void onClick_Product(object sender, EventArgs e)
-        {
-            //ProductScreen f_product = new ProductScreen();
-            //f_product.Show();
-        }
+        
 
         private void sw_move(object sender, MouseEventArgs e)
         {
@@ -115,16 +124,10 @@ namespace ShoppingOnline
             lb_pant.ForeColor = Color.Blue;
         }
 
-        private void pant_leave(object sender, MouseEventArgs e)
+        
+        private void pant_leave(object sender, EventArgs e)
         {
             lb_pant.ForeColor = Color.Black;
-        }
-
-        private void clickPant(object sender, EventArgs e)
-        {
-            prevState = State;
-            State = "pant";
-            showItem();
         }
         private void showItem()
         {
@@ -138,9 +141,70 @@ namespace ShoppingOnline
                 int price = Convert.ToInt32(dt.Rows[i]["PRODUCT_PRICE"]);
 
                 Control_Custom.Item it = new Control_Custom.Item(id, name, price.ToString());
-
+                
+                it.btn_detail.Click += new EventHandler(ClickDetail);
                 flowLayoutPanel1.Controls.Add(it);
             }
+        }
+
+        private void ClickDetail(object sender, EventArgs e)
+        {
+            
+            CButton bt = (CButton)sender;
+            DetailProduct dp = new DetailProduct(bt.Name);
+            
+            pn_detail.Controls.Add(dp);
+            pn_detail.Visible = true;
+        }
+        private void clickPant(object sender, EventArgs e)
+        {
+            prevState = State;
+            State = "pant";
+            
+            Loading();
+            showItem();
+        }
+
+        private void clickSw(object sender, EventArgs e)
+        {
+            prevState = State;
+            State = "sw";
+            Loading();
+            showItem();
+        }
+
+        private DataTable SearchProduct(string txt_search)
+        {
+            string query = "select * from PRODUCT where PRODUCT_NAME like '%" + txt_search + "%'";
+            Data_Provider provider = new Data_Provider();
+            dt_search = new DataTable();
+            dt_search = provider.ExecuteQuery(query);
+            return dt_search;
+        }
+
+        private void ShowProductSearch(DataTable dt_search)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            for (int i = 0; i < dt_search.Rows.Count; i++)
+            {
+                
+                string id = dt_search.Rows[i]["PRODUCT_ID"].ToString();
+                id = id.Replace(" ", "");
+
+                string name = dt_search.Rows[i]["PRODUCT_NAME"].ToString();
+                int price = Convert.ToInt32(dt_search.Rows[i]["PRODUCT_PRICE"]);
+
+                Control_Custom.Item it = new Control_Custom.Item(id, name, price.ToString());
+
+                it.btn_detail.Click += new EventHandler(ClickDetail);
+                flowLayoutPanel1.Controls.Add(it);
+            }
+        }
+
+        private void onClickSearch(object sender, EventArgs e)
+        {
+            dt_search = SearchProduct(txt_search.Text);
+            ShowProductSearch(dt_search);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoppingOnline.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,6 @@ namespace ShoppingOnline.Control_Custom
         public Item()
         {
             InitializeComponent();
-
         }
 
         public Item (string id,string s1, string s2) : this()
@@ -24,8 +24,17 @@ namespace ShoppingOnline.Control_Custom
 
             pictureBox1.BackgroundImage = bm1;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+
+
             label1.Text = s1;
-            label2.Text = s2;
+            label2.Text = s2 +"$";
+
+            btn_detail.Name = id;
+        }
+
+        private void cButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
