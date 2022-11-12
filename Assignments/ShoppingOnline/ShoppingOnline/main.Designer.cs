@@ -34,28 +34,20 @@ namespace ShoppingOnline
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cb_filter = new System.Windows.Forms.ComboBox();
-            this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shoppingOnlineDataSet = new ShoppingOnline.ShoppingOnlineDataSet();
-            this.cButton2 = new ShoppingOnline.Control_Custom.CButton();
-            this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.lb_man = new System.Windows.Forms.Label();
             this.lb_women = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lb_man = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
-            this.txt_search = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pn_detail = new System.Windows.Forms.Panel();
+            this.lb_kids = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cb_filter = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.whiteCart = new System.Windows.Forms.PictureBox();
+            this.blackCart = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.blackHeart = new System.Windows.Forms.PictureBox();
+            this.whiteHeart = new System.Windows.Forms.PictureBox();
             this.pn_women = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -76,18 +68,19 @@ namespace ShoppingOnline
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pRODUCTTableAdapter = new ShoppingOnline.ShoppingOnlineDataSetTableAdapters.PRODUCTTableAdapter();
+            this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pn_detail = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
+            this.txt_search = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingOnlineDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blackCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whiteHeart)).BeginInit();
             this.pn_women.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -98,6 +91,7 @@ namespace ShoppingOnline
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,7 +101,7 @@ namespace ShoppingOnline
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2012, 51);
+            this.panel1.Size = new System.Drawing.Size(1279, 51);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -116,7 +110,7 @@ namespace ShoppingOnline
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Goudy Stout", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(738, 0);
+            this.label1.Location = new System.Drawing.Point(421, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(501, 39);
             this.label1.TabIndex = 1;
@@ -126,180 +120,44 @@ namespace ShoppingOnline
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.txt_search);
+            this.panel2.Controls.Add(this.lb_man);
+            this.panel2.Controls.Add(this.lb_women);
+            this.panel2.Controls.Add(this.cButton1);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.btn_search);
+            this.panel2.Controls.Add(this.lb_kids);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cb_filter);
-            this.panel2.Controls.Add(this.cButton2);
-            this.panel2.Controls.Add(this.cButton1);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.pictureBox9);
-            this.panel2.Controls.Add(this.pictureBox11);
+            this.panel2.Controls.Add(this.whiteCart);
+            this.panel2.Controls.Add(this.blackCart);
             this.panel2.Controls.Add(this.pictureBox8);
-            this.panel2.Controls.Add(this.pictureBox10);
-            this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(3, 40);
+            this.panel2.Controls.Add(this.blackHeart);
+            this.panel2.Controls.Add(this.whiteHeart);
+            this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2009, 84);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(1279, 79);
+            this.panel2.TabIndex = 0;
             // 
-            // label3
+            // lb_man
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1324, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 23);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Lọc sản phẩm";
-            // 
-            // cb_filter
-            // 
-            this.cb_filter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cb_filter.DataSource = this.pRODUCTBindingSource;
-            this.cb_filter.DisplayMember = "PRODUCT_FROM";
-            this.cb_filter.FormattingEnabled = true;
-            this.cb_filter.Location = new System.Drawing.Point(1327, 48);
-            this.cb_filter.Name = "cb_filter";
-            this.cb_filter.Size = new System.Drawing.Size(127, 24);
-            this.cb_filter.TabIndex = 19;
-            this.cb_filter.ValueMember = "PRODUCT_FROM";
-            this.cb_filter.SelectedValueChanged += new System.EventHandler(this.valueChangeCountry);
-            // 
-            // pRODUCTBindingSource
-            // 
-            this.pRODUCTBindingSource.DataMember = "PRODUCT";
-            this.pRODUCTBindingSource.DataSource = this.shoppingOnlineDataSet;
-            // 
-            // shoppingOnlineDataSet
-            // 
-            this.shoppingOnlineDataSet.DataSetName = "ShoppingOnlineDataSet";
-            this.shoppingOnlineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cButton2
-            // 
-            this.cButton2.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.cButton2.BackgroundColor = System.Drawing.Color.MediumAquamarine;
-            this.cButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton2.BorderRadius = 20;
-            this.cButton2.BorderSize = 0;
-            this.cButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton2.FlatAppearance.BorderSize = 0;
-            this.cButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton2.ForeColor = System.Drawing.Color.Black;
-            this.cButton2.Location = new System.Drawing.Point(1174, 17);
-            this.cButton2.Name = "cButton2";
-            this.cButton2.Size = new System.Drawing.Size(101, 56);
-            this.cButton2.TabIndex = 18;
-            this.cButton2.Text = "Giỏ hàng";
-            this.cButton2.TextColor = System.Drawing.Color.Black;
-            this.cButton2.UseVisualStyleBackColor = false;
-            // 
-            // cButton1
-            // 
-            this.cButton1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.cButton1.BackgroundColor = System.Drawing.Color.MediumAquamarine;
-            this.cButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton1.BorderRadius = 20;
-            this.cButton1.BorderSize = 0;
-            this.cButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton1.FlatAppearance.BorderSize = 0;
-            this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton1.ForeColor = System.Drawing.Color.Black;
-            this.cButton1.Location = new System.Drawing.Point(147, 15);
-            this.cButton1.Name = "cButton1";
-            this.cButton1.Size = new System.Drawing.Size(101, 56);
-            this.cButton1.TabIndex = 17;
-            this.cButton1.Text = "Lịch sử đặt hàng";
-            this.cButton1.TextColor = System.Drawing.Color.Black;
-            this.cButton1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 60);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(1113, 38);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox9.TabIndex = 9;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(1114, 38);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Visible = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(1000, 40);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox8.TabIndex = 8;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(1060, 38);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox10.TabIndex = 10;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Visible = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(1060, 38);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.lb_women);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.lb_man);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.btn_search);
-            this.panel3.Controls.Add(this.txt_search);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(275, 19);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(707, 60);
-            this.panel3.TabIndex = 4;
+            this.lb_man.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_man.AutoSize = true;
+            this.lb_man.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_man.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_man.Location = new System.Drawing.Point(256, 36);
+            this.lb_man.Name = "lb_man";
+            this.lb_man.Size = new System.Drawing.Size(54, 25);
+            this.lb_man.TabIndex = 0;
+            this.lb_man.Text = "Man";
+            this.lb_man.Click += new System.EventHandler(this.onClickMan);
+            this.lb_man.MouseLeave += new System.EventHandler(this.Man_Leave);
+            this.lb_man.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Man_Move);
             // 
             // lb_women
             // 
@@ -308,7 +166,7 @@ namespace ShoppingOnline
             this.lb_women.AutoSize = true;
             this.lb_women.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_women.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_women.Location = new System.Drawing.Point(92, 20);
+            this.lb_women.Location = new System.Drawing.Point(314, 36);
             this.lb_women.Name = "lb_women";
             this.lb_women.Size = new System.Drawing.Size(86, 25);
             this.lb_women.TabIndex = 1;
@@ -323,27 +181,68 @@ namespace ShoppingOnline
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(362, 20);
+            this.label6.Location = new System.Drawing.Point(519, 36);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 25);
             this.label6.TabIndex = 3;
             this.label6.Text = "Sale";
             // 
-            // lb_man
+            // btn_search
             // 
-            this.lb_man.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_search.BackgroundImage")));
+            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_search.Location = new System.Drawing.Point(823, 17);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(61, 57);
+            this.btn_search.TabIndex = 14;
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.onClickSearch);
+            // 
+            // lb_kids
+            // 
+            this.lb_kids.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_man.AutoSize = true;
-            this.lb_man.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_man.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_man.Location = new System.Drawing.Point(20, 20);
-            this.lb_man.Name = "lb_man";
-            this.lb_man.Size = new System.Drawing.Size(54, 25);
-            this.lb_man.TabIndex = 0;
-            this.lb_man.Text = "Man";
-            this.lb_man.Click += new System.EventHandler(this.onClickMan);
-            this.lb_man.MouseLeave += new System.EventHandler(this.Man_Leave);
-            this.lb_man.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Man_Move);
+            this.lb_kids.AutoSize = true;
+            this.lb_kids.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_kids.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_kids.Location = new System.Drawing.Point(402, 36);
+            this.lb_kids.Name = "lb_kids";
+            this.lb_kids.Size = new System.Drawing.Size(55, 25);
+            this.lb_kids.TabIndex = 2;
+            this.lb_kids.Text = "Kids";
+            this.lb_kids.MouseLeave += new System.EventHandler(this.kids_leave);
+            this.lb_kids.MouseMove += new System.Windows.Forms.MouseEventHandler(this.kids_move);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1052, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 23);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Lọc quốc gia";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // cb_filter
+            // 
+            this.cb_filter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_filter.FormattingEnabled = true;
+            this.cb_filter.Items.AddRange(new object[] {
+            "Vietnam",
+            "Thailand",
+            "Lao",
+            "US",
+            "Singgapo",
+            "China",
+            "Malaysia"});
+            this.cb_filter.Location = new System.Drawing.Point(1056, 46);
+            this.cb_filter.Name = "cb_filter";
+            this.cb_filter.Size = new System.Drawing.Size(127, 24);
+            this.cb_filter.TabIndex = 19;
+            this.cb_filter.SelectedValueChanged += new System.EventHandler(this.valueChangeCountry);
             // 
             // label5
             // 
@@ -351,63 +250,85 @@ namespace ShoppingOnline
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(290, 20);
+            this.label5.Location = new System.Drawing.Point(461, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Gifts";
             // 
-            // btn_search
+            // pictureBox1
             // 
-            this.btn_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_search.BackgroundImage")));
-            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_search.Location = new System.Drawing.Point(643, -1);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(61, 57);
-            this.btn_search.TabIndex = 14;
-            this.btn_search.UseVisualStyleBackColor = true;
-            this.btn_search.Click += new System.EventHandler(this.onClickSearch);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 60);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.clickLogo);
             // 
-            // txt_search
+            // whiteCart
             // 
-            this.txt_search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txt_search.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(424, 1);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(213, 52);
-            this.txt_search.TabIndex = 15;
-            this.txt_search.Text = "";
+            this.whiteCart.BackColor = System.Drawing.Color.Transparent;
+            this.whiteCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("whiteCart.BackgroundImage")));
+            this.whiteCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.whiteCart.Location = new System.Drawing.Point(977, 39);
+            this.whiteCart.Name = "whiteCart";
+            this.whiteCart.Size = new System.Drawing.Size(34, 32);
+            this.whiteCart.TabIndex = 9;
+            this.whiteCart.TabStop = false;
+            this.whiteCart.Click += new System.EventHandler(this.clickWhiteCart);
             // 
-            // label4
+            // blackCart
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(207, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Kids";
+            this.blackCart.BackColor = System.Drawing.Color.Transparent;
+            this.blackCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blackCart.BackgroundImage")));
+            this.blackCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blackCart.Location = new System.Drawing.Point(977, 39);
+            this.blackCart.Name = "blackCart";
+            this.blackCart.Size = new System.Drawing.Size(34, 32);
+            this.blackCart.TabIndex = 10;
+            this.blackCart.TabStop = false;
+            this.blackCart.Visible = false;
+            this.blackCart.Click += new System.EventHandler(this.clickBlackCart);
             // 
-            // flowLayoutPanel1
+            // pictureBox8
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 277);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(2060, 545);
-            this.flowLayoutPanel1.TabIndex = 13;
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(897, 39);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(34, 32);
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
             // 
-            // pn_detail
+            // blackHeart
             // 
-            this.pn_detail.Location = new System.Drawing.Point(12, 260);
-            this.pn_detail.Name = "pn_detail";
-            this.pn_detail.Size = new System.Drawing.Size(2000, 571);
-            this.pn_detail.TabIndex = 14;
-            this.pn_detail.Visible = false;
+            this.blackHeart.BackColor = System.Drawing.Color.Transparent;
+            this.blackHeart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blackHeart.BackgroundImage")));
+            this.blackHeart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blackHeart.Location = new System.Drawing.Point(937, 39);
+            this.blackHeart.Name = "blackHeart";
+            this.blackHeart.Size = new System.Drawing.Size(34, 32);
+            this.blackHeart.TabIndex = 10;
+            this.blackHeart.TabStop = false;
+            this.blackHeart.Visible = false;
+            this.blackHeart.Click += new System.EventHandler(this.clickBlackHeart);
+            // 
+            // whiteHeart
+            // 
+            this.whiteHeart.BackColor = System.Drawing.Color.Transparent;
+            this.whiteHeart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("whiteHeart.BackgroundImage")));
+            this.whiteHeart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.whiteHeart.Location = new System.Drawing.Point(937, 39);
+            this.whiteHeart.Name = "whiteHeart";
+            this.whiteHeart.Size = new System.Drawing.Size(34, 32);
+            this.whiteHeart.TabIndex = 7;
+            this.whiteHeart.TabStop = false;
+            this.whiteHeart.Click += new System.EventHandler(this.clickHeart);
             // 
             // pn_women
             // 
@@ -421,7 +342,7 @@ namespace ShoppingOnline
             this.pn_women.Controls.Add(this.pictureBox14);
             this.pn_women.Controls.Add(this.label15);
             this.pn_women.Controls.Add(this.pictureBox15);
-            this.pn_women.Location = new System.Drawing.Point(367, 125);
+            this.pn_women.Location = new System.Drawing.Point(286, 128);
             this.pn_women.Name = "pn_women";
             this.pn_women.Size = new System.Drawing.Size(221, 143);
             this.pn_women.TabIndex = 12;
@@ -529,7 +450,7 @@ namespace ShoppingOnline
             this.pn_man.Controls.Add(this.pictureBox4);
             this.pn_man.Controls.Add(this.label2);
             this.pn_man.Controls.Add(this.pictureBox3);
-            this.pn_man.Location = new System.Drawing.Point(133, 125);
+            this.pn_man.Location = new System.Drawing.Point(52, 128);
             this.pn_man.Name = "pn_man";
             this.pn_man.Size = new System.Drawing.Size(228, 143);
             this.pn_man.TabIndex = 11;
@@ -641,20 +562,67 @@ namespace ShoppingOnline
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // pRODUCTTableAdapter
+            // pRODUCTBindingSource
             // 
-            this.pRODUCTTableAdapter.ClearBeforeFill = true;
+            this.pRODUCTBindingSource.DataMember = "PRODUCT";
+            // 
+            // pn_detail
+            // 
+            this.pn_detail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_detail.Location = new System.Drawing.Point(0, 130);
+            this.pn_detail.Name = "pn_detail";
+            this.pn_detail.Size = new System.Drawing.Size(1279, 798);
+            this.pn_detail.TabIndex = 18;
+            this.pn_detail.Visible = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 178);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1267, 647);
+            this.flowLayoutPanel1.TabIndex = 19;
+            // 
+            // cButton1
+            // 
+            this.cButton1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.cButton1.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
+            this.cButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton1.BorderRadius = 20;
+            this.cButton1.BorderSize = 0;
+            this.cButton1.FlatAppearance.BorderSize = 0;
+            this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton1.ForeColor = System.Drawing.Color.Black;
+            this.cButton1.Location = new System.Drawing.Point(140, 18);
+            this.cButton1.Name = "cButton1";
+            this.cButton1.Size = new System.Drawing.Size(111, 53);
+            this.cButton1.TabIndex = 21;
+            this.cButton1.Text = "Lịch sử đặt hàng";
+            this.cButton1.TextColor = System.Drawing.Color.Black;
+            this.cButton1.UseVisualStyleBackColor = false;
+            // 
+            // txt_search
+            // 
+            this.txt_search.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F);
+            this.txt_search.Location = new System.Drawing.Point(622, 28);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(183, 41);
+            this.txt_search.TabIndex = 22;
+            this.txt_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownSearch);
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1924, 1013);
-            this.Controls.Add(this.pn_detail);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(1279, 952);
             this.Controls.Add(this.pn_women);
             this.Controls.Add(this.pn_man);
+            this.Controls.Add(this.pn_detail);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -666,16 +634,12 @@ namespace ShoppingOnline
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingOnlineDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blackCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whiteHeart)).EndInit();
             this.pn_women.ResumeLayout(false);
             this.pn_women.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -688,6 +652,7 @@ namespace ShoppingOnline
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -697,22 +662,18 @@ namespace ShoppingOnline
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lb_women;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lb_man;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label lb_kids;
+        private System.Windows.Forms.PictureBox whiteCart;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        public System.Windows.Forms.RichTextBox txt_search;
+        private System.Windows.Forms.PictureBox whiteHeart;
+        private System.Windows.Forms.PictureBox blackHeart;
+        private System.Windows.Forms.PictureBox blackCart;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pn_detail;
         private System.Windows.Forms.Panel pn_women;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
@@ -733,13 +694,14 @@ namespace ShoppingOnline
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Control_Custom.CButton cButton2;
-        private Control_Custom.CButton cButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cb_filter;
-        private ShoppingOnlineDataSet shoppingOnlineDataSet;
+        
         private System.Windows.Forms.BindingSource pRODUCTBindingSource;
-        private ShoppingOnlineDataSetTableAdapters.PRODUCTTableAdapter pRODUCTTableAdapter;
+        private Control_Custom.CButton cButton1;
+        public System.Windows.Forms.Panel pn_detail;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TextBox txt_search;
     }
 }
 

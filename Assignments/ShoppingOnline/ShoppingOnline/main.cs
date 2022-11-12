@@ -19,8 +19,7 @@ namespace ShoppingOnline
         public string prevState = "";
         public string State = "pant";
         static DataTable dt_search;
-
-
+        static DataTable dt_filter;
         static DataTable dt;
 
         public main()
@@ -69,7 +68,7 @@ namespace ShoppingOnline
         private void main_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'shoppingOnlineDataSet.PRODUCT' table. You can move, or remove it, as needed.
-            this.pRODUCTTableAdapter.FillBy(this.shoppingOnlineDataSet.PRODUCT);
+            
             showItem();
         }
 
@@ -94,8 +93,14 @@ namespace ShoppingOnline
         {
             lb_women.ForeColor = Color.Black;
         }
-
-
+        private void kids_move(object sender, MouseEventArgs e)
+        {
+            lb_kids.ForeColor = Color.White;
+        }
+        private void kids_leave(object sender, EventArgs e)
+        {
+            lb_kids.ForeColor = Color.Black;
+        }
 
         private void sw_move(object sender, MouseEventArgs e)
         {
@@ -168,12 +173,19 @@ namespace ShoppingOnline
             }
         }
 
+        private void ClickClose(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = true;
+            pn_detail.Visible = false;
+            pn_detail.Controls.Clear();
+        }
         private void ClickDetail(object sender, EventArgs e)
         {
 
             CButton bt = (CButton)sender;
             DetailProduct dp = new DetailProduct(bt.Name);
 
+            dp.pic_close.Click += new EventHandler(ClickClose);
             pn_detail.Controls.Add(dp);
             pn_detail.Visible = true;
         }
@@ -248,32 +260,73 @@ namespace ShoppingOnline
                 ShowProductSearch(dt_search);
             }
         }
-
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        private void valueChangeCountry(object sender, EventArgs e)
         {
-            try
-            {
-                this.pRODUCTTableAdapter.FillBy(this.shoppingOnlineDataSet.PRODUCT);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            dt_filter = FilterCountry(cb_filter.Text);
+            ShowProductSearch(dt_filter);
+        }
+
+        private DataTable FilterCountry(string txt_cb)
+        {
+            string query = "select * from PRODUCT where PRODUCT_FROM like '" + txt_cb + "'";
+            Data_Provider provider = new Data_Provider();
+            dt_filter = new DataTable();
+            dt_filter = provider.ExecuteQuery(query);
+            return dt_filter;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void valueChangeCountry(object sender, EventArgs e)
+        private void clickLogo(object sender, EventArgs e)
         {
-            if(cb_filter.Text.ToString() == "Vietnam")
-            {
-                MessageBox.Show("Vietnam");
-            }
+            State = "pant";
+            Loading();
+            showItem();
+        }
 
-            if (cb_filter.Text.ToString() == "Thailand")
+        private void clickHeart(object sender, EventArgs e)
+        {
+            blackHeart.Visible = true;
+            whiteHeart.Visible = false;
+        }
+
+        private void clickBlackHeart(object sender, EventArgs e)
+        {
+            blackHeart.Visible = false;
+            whiteHeart.Visible = true;
+        }
+
+        private void KeyDownSearch(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Thailand");
+                dt_search = SearchProduct(txt_search.Text);
+                if (dt_search.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có sản phẩm bạn cần tìm!");
+                }
+                else
+                {
+                    ShowProductSearch(dt_search);
+                }
+
+                txt_search.Text = "";
             }
+        }
+
+        private void clickWhiteCart(object sender, EventArgs e)
+        {
+            blackCart.Visible = true;
+            whiteCart.Visible = false;
+        }
+
+        private void clickBlackCart(object sender, EventArgs e)
+        {
+            blackCart.Visible = false;
+            whiteCart.Visible = true;
         }
     }
 }
