@@ -46,7 +46,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.lb_ten.AutoSize = true;
             this.lb_ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ten.Location = new System.Drawing.Point(686, 59);
+            this.lb_ten.Location = new System.Drawing.Point(465, 58);
             this.lb_ten.Name = "lb_ten";
             this.lb_ten.Size = new System.Drawing.Size(71, 25);
             this.lb_ten.TabIndex = 24;
@@ -57,7 +57,7 @@ namespace ShoppingOnline.Control_Custom
             this.lb_gia.AutoSize = true;
             this.lb_gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_gia.ForeColor = System.Drawing.Color.Red;
-            this.lb_gia.Location = new System.Drawing.Point(686, 15);
+            this.lb_gia.Location = new System.Drawing.Point(465, 14);
             this.lb_gia.Name = "lb_gia";
             this.lb_gia.Size = new System.Drawing.Size(41, 25);
             this.lb_gia.TabIndex = 18;
@@ -67,7 +67,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.lb_chatlieu.AutoSize = true;
             this.lb_chatlieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_chatlieu.Location = new System.Drawing.Point(686, 106);
+            this.lb_chatlieu.Location = new System.Drawing.Point(465, 105);
             this.lb_chatlieu.Name = "lb_chatlieu";
             this.lb_chatlieu.Size = new System.Drawing.Size(79, 25);
             this.lb_chatlieu.TabIndex = 22;
@@ -81,7 +81,7 @@ namespace ShoppingOnline.Control_Custom
             "S",
             "M",
             "L"});
-            this.cb_size.Location = new System.Drawing.Point(691, 243);
+            this.cb_size.Location = new System.Drawing.Point(470, 242);
             this.cb_size.Name = "cb_size";
             this.cb_size.Size = new System.Drawing.Size(100, 33);
             this.cb_size.TabIndex = 20;
@@ -90,7 +90,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.lb_soluong.AutoSize = true;
             this.lb_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_soluong.Location = new System.Drawing.Point(686, 149);
+            this.lb_soluong.Location = new System.Drawing.Point(465, 148);
             this.lb_soluong.Name = "lb_soluong";
             this.lb_soluong.Size = new System.Drawing.Size(81, 25);
             this.lb_soluong.TabIndex = 19;
@@ -100,7 +100,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.lb_quocgia.AutoSize = true;
             this.lb_quocgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_quocgia.Location = new System.Drawing.Point(686, 196);
+            this.lb_quocgia.Location = new System.Drawing.Point(465, 195);
             this.lb_quocgia.Name = "lb_quocgia";
             this.lb_quocgia.Size = new System.Drawing.Size(81, 25);
             this.lb_quocgia.TabIndex = 21;
@@ -110,7 +110,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(682, 492);
+            this.pictureBox2.Location = new System.Drawing.Point(470, 301);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 60);
             this.pictureBox2.TabIndex = 23;
@@ -120,7 +120,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.pic_detail.Location = new System.Drawing.Point(25, 15);
             this.pic_detail.Name = "pic_detail";
-            this.pic_detail.Size = new System.Drawing.Size(599, 537);
+            this.pic_detail.Size = new System.Drawing.Size(406, 447);
             this.pic_detail.TabIndex = 17;
             this.pic_detail.TabStop = false;
             // 
@@ -138,7 +138,7 @@ namespace ShoppingOnline.Control_Custom
             this.Controls.Add(this.lb_soluong);
             this.Controls.Add(this.lb_quocgia);
             this.Name = "DetailProduct";
-            this.Size = new System.Drawing.Size(2000, 571);
+            this.Size = new System.Drawing.Size(1054, 517);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).EndInit();
             this.ResumeLayout(false);

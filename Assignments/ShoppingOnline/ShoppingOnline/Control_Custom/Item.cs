@@ -31,10 +31,5 @@ namespace ShoppingOnline.Control_Custom
 
             btn_detail.Name = id;
         }
-
-        private void cButton1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

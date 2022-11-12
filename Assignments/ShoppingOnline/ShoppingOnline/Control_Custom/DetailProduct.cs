@@ -14,8 +14,6 @@ namespace ShoppingOnline.Control_Custom
     public partial class DetailProduct : UserControl
     {
         static DataTable dt;
-        public string prevState = "";
-        public string State = "pant";
         public DetailProduct()
         {
             InitializeComponent();

@@ -61,6 +61,12 @@
     <Compile Include="Control_Custom\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control_Custom\itemCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_Custom\itemCart.Designer.cs">
+      <DependentUpon>itemCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\Data_Provider.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control_Custom\Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_Custom\itemCart.resx">
+      <DependentUpon>itemCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

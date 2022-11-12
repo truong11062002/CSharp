@@ -11,3 +11,4 @@ C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Control_Custom.Item.resources
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Resources.pants.resources
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Control_Custom.DetailProduct.resources
+C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Control_Custom.itemCart.resources
