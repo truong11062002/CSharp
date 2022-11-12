@@ -699,7 +699,7 @@ namespace ShoppingOnline
         
         private System.Windows.Forms.BindingSource pRODUCTBindingSource;
         private Control_Custom.CButton cButton1;
-        private System.Windows.Forms.Panel pn_detail;
+        public System.Windows.Forms.Panel pn_detail;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox txt_search;
     }

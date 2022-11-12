@@ -38,6 +38,5 @@ namespace ShoppingOnline.Control_Custom
             lb_soluong.Text = dt.Rows[0]["PRODUCT_QUANTITY"].ToString();
 
         }
-
     }
 }

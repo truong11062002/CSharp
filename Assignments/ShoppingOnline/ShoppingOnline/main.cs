@@ -173,12 +173,19 @@ namespace ShoppingOnline
             }
         }
 
+        private void ClickClose(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = true;
+            pn_detail.Visible = false;
+            pn_detail.Controls.Clear();
+        }
         private void ClickDetail(object sender, EventArgs e)
         {
 
             CButton bt = (CButton)sender;
             DetailProduct dp = new DetailProduct(bt.Name);
 
+            dp.pic_close.Click += new EventHandler(ClickClose);
             pn_detail.Controls.Add(dp);
             pn_detail.Visible = true;
         }
@@ -253,48 +260,10 @@ namespace ShoppingOnline
                 ShowProductSearch(dt_search);
             }
         }
-
-
-        
-
         private void valueChangeCountry(object sender, EventArgs e)
         {
-            if(cb_filter.Text.ToString() == "Vietnam")
-            {
-                dt_filter = FilterCountry(cb_filter.Text);
-                ShowProductSearch(dt_filter);
-            }
-
-            if (cb_filter.Text.ToString() == "Thailand")
-            {
-                dt_filter = FilterCountry(cb_filter.Text);
-                ShowProductSearch(dt_filter);
-            }
-            if (cb_filter.Text.ToString() == "Lao")
-            {
-                dt_filter = FilterCountry(cb_filter.Text);
-                ShowProductSearch(dt_filter);
-            }
-            if (cb_filter.Text.ToString() == "US")
-            {
-                dt_filter = FilterCountry(cb_filter.Text);
-                ShowProductSearch(dt_filter);
-            }
-            if (cb_filter.Text.ToString() == "Singapo")
-            {
-                dt_filter = FilterCountry(cb_filter.Text);
-                ShowProductSearch(dt_filter);
-            }
-            if (cb_filter.Text.ToString() == "China")
-            {
-                dt_filter = FilterCountry(cb_filter.Text);
-                ShowProductSearch(dt_filter);
-            }
-            if (cb_filter.Text.ToString() == "Malaysia")
-            {
-                dt_filter = FilterCountry(cb_filter.Text);
-                ShowProductSearch(dt_filter);
-            }
+            dt_filter = FilterCountry(cb_filter.Text);
+            ShowProductSearch(dt_filter);
         }
 
         private DataTable FilterCountry(string txt_cb)

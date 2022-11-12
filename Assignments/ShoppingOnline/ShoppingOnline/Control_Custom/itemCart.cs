@@ -16,5 +16,10 @@ namespace ShoppingOnline.Control_Custom
         {
             InitializeComponent();
         }
+
+        public itemCart(string id): this()
+        {
+
+        }
     }
 }

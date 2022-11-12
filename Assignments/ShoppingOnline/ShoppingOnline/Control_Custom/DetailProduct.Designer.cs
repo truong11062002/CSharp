@@ -36,10 +36,13 @@ namespace ShoppingOnline.Control_Custom
             this.cb_size = new System.Windows.Forms.ComboBox();
             this.lb_soluong = new System.Windows.Forms.Label();
             this.lb_quocgia = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pic_detail = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_ten
@@ -106,16 +109,6 @@ namespace ShoppingOnline.Control_Custom
             this.lb_quocgia.TabIndex = 21;
             this.lb_quocgia.Text = "quocgia";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(470, 301);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 60);
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
             // pic_detail
             // 
             this.pic_detail.Location = new System.Drawing.Point(25, 15);
@@ -124,12 +117,56 @@ namespace ShoppingOnline.Control_Custom
             this.pic_detail.TabIndex = 17;
             this.pic_detail.TabStop = false;
             // 
+            // pic_close
+            // 
+            this.pic_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_close.BackgroundImage")));
+            this.pic_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_close.Location = new System.Drawing.Point(1013, 3);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(38, 36);
+            this.pic_close.TabIndex = 25;
+            this.pic_close.TabStop = false;
+            // 
+            // cButton1
+            // 
+            this.cButton1.BackColor = System.Drawing.Color.Red;
+            this.cButton1.BackgroundColor = System.Drawing.Color.Red;
+            this.cButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton1.BorderRadius = 20;
+            this.cButton1.BorderSize = 0;
+            this.cButton1.FlatAppearance.BorderSize = 0;
+            this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton1.ForeColor = System.Drawing.Color.White;
+            this.cButton1.Location = new System.Drawing.Point(470, 387);
+            this.cButton1.Name = "cButton1";
+            this.cButton1.Size = new System.Drawing.Size(150, 63);
+            this.cButton1.TabIndex = 26;
+            this.cButton1.Text = "Add to cart";
+            this.cButton1.TextColor = System.Drawing.Color.White;
+            this.cButton1.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(470, 305);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(108, 27);
+            this.numericUpDown1.TabIndex = 27;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // DetailProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.cButton1);
+            this.Controls.Add(this.pic_close);
             this.Controls.Add(this.lb_ten);
             this.Controls.Add(this.lb_gia);
             this.Controls.Add(this.pic_detail);
@@ -139,16 +176,15 @@ namespace ShoppingOnline.Control_Custom
             this.Controls.Add(this.lb_quocgia);
             this.Name = "DetailProduct";
             this.Size = new System.Drawing.Size(1054, 517);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lb_ten;
         private System.Windows.Forms.Label lb_gia;
         private System.Windows.Forms.PictureBox pic_detail;
@@ -156,5 +192,8 @@ namespace ShoppingOnline.Control_Custom
         private System.Windows.Forms.ComboBox cb_size;
         private System.Windows.Forms.Label lb_soluong;
         private System.Windows.Forms.Label lb_quocgia;
+        public System.Windows.Forms.PictureBox pic_close;
+        private CButton cButton1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
