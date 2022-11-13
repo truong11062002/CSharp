@@ -40,7 +40,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 243);
+            this.label1.Location = new System.Drawing.Point(12, 359);
             this.label1.MaximumSize = new System.Drawing.Size(356, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
@@ -52,7 +52,7 @@ namespace ShoppingOnline.Control_Custom
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(303, 288);
+            this.label2.Location = new System.Drawing.Point(308, 386);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 2;
@@ -62,7 +62,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.pictureBox1.Location = new System.Drawing.Point(11, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(356, 214);
+            this.pictureBox1.Size = new System.Drawing.Size(377, 325);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -77,7 +77,7 @@ namespace ShoppingOnline.Control_Custom
             this.btn_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_detail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_detail.ForeColor = System.Drawing.Color.White;
-            this.btn_detail.Location = new System.Drawing.Point(116, 311);
+            this.btn_detail.Location = new System.Drawing.Point(121, 409);
             this.btn_detail.Name = "btn_detail";
             this.btn_detail.Size = new System.Drawing.Size(146, 48);
             this.btn_detail.TabIndex = 5;
@@ -95,7 +95,7 @@ namespace ShoppingOnline.Control_Custom
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Item";
-            this.Size = new System.Drawing.Size(380, 362);
+            this.Size = new System.Drawing.Size(407, 494);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

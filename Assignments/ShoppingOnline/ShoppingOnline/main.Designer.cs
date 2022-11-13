@@ -34,6 +34,7 @@ namespace ShoppingOnline
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_search = new System.Windows.Forms.TextBox();
             this.lb_man = new System.Windows.Forms.Label();
             this.lb_women = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace ShoppingOnline
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.whiteCart = new System.Windows.Forms.PictureBox();
-            this.blackCart = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.blackHeart = new System.Windows.Forms.PictureBox();
             this.whiteHeart = new System.Windows.Forms.PictureBox();
@@ -72,12 +72,10 @@ namespace ShoppingOnline
             this.pn_detail = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
-            this.txt_search = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteHeart)).BeginInit();
@@ -134,7 +132,6 @@ namespace ShoppingOnline
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.whiteCart);
-            this.panel2.Controls.Add(this.blackCart);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.blackHeart);
             this.panel2.Controls.Add(this.whiteHeart);
@@ -142,6 +139,15 @@ namespace ShoppingOnline
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1279, 79);
             this.panel2.TabIndex = 0;
+            // 
+            // txt_search
+            // 
+            this.txt_search.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F);
+            this.txt_search.Location = new System.Drawing.Point(622, 28);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(183, 41);
+            this.txt_search.TabIndex = 22;
+            this.txt_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownSearch);
             // 
             // lb_man
             // 
@@ -274,25 +280,12 @@ namespace ShoppingOnline
             this.whiteCart.BackColor = System.Drawing.Color.Transparent;
             this.whiteCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("whiteCart.BackgroundImage")));
             this.whiteCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.whiteCart.Location = new System.Drawing.Point(977, 39);
+            this.whiteCart.Location = new System.Drawing.Point(977, 38);
             this.whiteCart.Name = "whiteCart";
             this.whiteCart.Size = new System.Drawing.Size(34, 32);
             this.whiteCart.TabIndex = 9;
             this.whiteCart.TabStop = false;
             this.whiteCart.Click += new System.EventHandler(this.clickWhiteCart);
-            // 
-            // blackCart
-            // 
-            this.blackCart.BackColor = System.Drawing.Color.Transparent;
-            this.blackCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blackCart.BackgroundImage")));
-            this.blackCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.blackCart.Location = new System.Drawing.Point(977, 39);
-            this.blackCart.Name = "blackCart";
-            this.blackCart.Size = new System.Drawing.Size(34, 32);
-            this.blackCart.TabIndex = 10;
-            this.blackCart.TabStop = false;
-            this.blackCart.Visible = false;
-            this.blackCart.Click += new System.EventHandler(this.clickBlackCart);
             // 
             // pictureBox8
             // 
@@ -568,12 +561,9 @@ namespace ShoppingOnline
             // 
             // pn_detail
             // 
-            this.pn_detail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pn_detail.Location = new System.Drawing.Point(0, 130);
             this.pn_detail.Name = "pn_detail";
-            this.pn_detail.Size = new System.Drawing.Size(1279, 798);
+            this.pn_detail.Size = new System.Drawing.Size(1279, 810);
             this.pn_detail.TabIndex = 18;
             this.pn_detail.Visible = false;
             // 
@@ -582,7 +572,7 @@ namespace ShoppingOnline
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 178);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1267, 647);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1267, 607);
             this.flowLayoutPanel1.TabIndex = 19;
             // 
             // cButton1
@@ -603,15 +593,6 @@ namespace ShoppingOnline
             this.cButton1.Text = "Lịch sử đặt hàng";
             this.cButton1.TextColor = System.Drawing.Color.Black;
             this.cButton1.UseVisualStyleBackColor = false;
-            // 
-            // txt_search
-            // 
-            this.txt_search.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F);
-            this.txt_search.Location = new System.Drawing.Point(622, 28);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(183, 41);
-            this.txt_search.TabIndex = 22;
-            this.txt_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownSearch);
             // 
             // main
             // 
@@ -636,7 +617,6 @@ namespace ShoppingOnline
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteHeart)).EndInit();
@@ -671,7 +651,6 @@ namespace ShoppingOnline
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox whiteHeart;
         private System.Windows.Forms.PictureBox blackHeart;
-        private System.Windows.Forms.PictureBox blackCart;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pn_women;
