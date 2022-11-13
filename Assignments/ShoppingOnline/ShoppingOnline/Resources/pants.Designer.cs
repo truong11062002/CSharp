@@ -573,16 +573,6 @@ namespace ShoppingOnline.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap jacket57 {
-            get {
-                object obj = ResourceManager.GetObject("jacket57", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap jacket58 {
             get {
                 object obj = ResourceManager.GetObject("jacket58", resourceCulture);
@@ -686,16 +676,6 @@ namespace ShoppingOnline.Resources {
         internal static System.Drawing.Bitmap jacket7 {
             get {
                 object obj = ResourceManager.GetObject("jacket7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap jacket8 {
-            get {
-                object obj = ResourceManager.GetObject("jacket8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -836,16 +816,6 @@ namespace ShoppingOnline.Resources {
         internal static System.Drawing.Bitmap pant20 {
             get {
                 object obj = ResourceManager.GetObject("pant20", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pant21 {
-            get {
-                object obj = ResourceManager.GetObject("pant21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

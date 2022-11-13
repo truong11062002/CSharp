@@ -24,5 +24,29 @@ namespace ShoppingOnline.DAO
             return data;
         }
 
+        // UPDATA / DELETE / INSERT
+        public int ExecuteNonQuery(string query)
+        {
+            int data = 0;
+            SqlConnection connection = new SqlConnection(StringConnection);
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            data = command.ExecuteNonQuery();
+            connection.Close();
+            return data;
+        }
+
+        // COUNT
+        public object ExecuteScalar(string query)
+        {
+            object data = 0;
+            SqlConnection connection = new SqlConnection(StringConnection);
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            data = command.ExecuteScalar();
+            connection.Close();
+            return data;
+        }
+
     }
 }

@@ -38,11 +38,14 @@ namespace ShoppingOnline.Control_Custom
             this.lb_quocgia = new System.Windows.Forms.Label();
             this.pic_detail = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
+            this.quantity_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_ten
@@ -70,7 +73,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.lb_chatlieu.AutoSize = true;
             this.lb_chatlieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_chatlieu.Location = new System.Drawing.Point(465, 105);
+            this.lb_chatlieu.Location = new System.Drawing.Point(709, 105);
             this.lb_chatlieu.Name = "lb_chatlieu";
             this.lb_chatlieu.Size = new System.Drawing.Size(79, 25);
             this.lb_chatlieu.TabIndex = 22;
@@ -88,12 +91,13 @@ namespace ShoppingOnline.Control_Custom
             this.cb_size.Name = "cb_size";
             this.cb_size.Size = new System.Drawing.Size(100, 33);
             this.cb_size.TabIndex = 20;
+            this.cb_size.Text = "S";
             // 
             // lb_soluong
             // 
             this.lb_soluong.AutoSize = true;
             this.lb_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_soluong.Location = new System.Drawing.Point(465, 148);
+            this.lb_soluong.Location = new System.Drawing.Point(709, 148);
             this.lb_soluong.Name = "lb_soluong";
             this.lb_soluong.Size = new System.Drawing.Size(81, 25);
             this.lb_soluong.TabIndex = 19;
@@ -103,7 +107,7 @@ namespace ShoppingOnline.Control_Custom
             // 
             this.lb_quocgia.AutoSize = true;
             this.lb_quocgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_quocgia.Location = new System.Drawing.Point(465, 195);
+            this.lb_quocgia.Location = new System.Drawing.Point(709, 195);
             this.lb_quocgia.Name = "lb_quocgia";
             this.lb_quocgia.Size = new System.Drawing.Size(81, 25);
             this.lb_quocgia.TabIndex = 21;
@@ -127,6 +131,49 @@ namespace ShoppingOnline.Control_Custom
             this.pic_close.TabIndex = 25;
             this.pic_close.TabStop = false;
             // 
+            // quantity_numericUpDown
+            // 
+            this.quantity_numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantity_numericUpDown.Location = new System.Drawing.Point(470, 305);
+            this.quantity_numericUpDown.Name = "quantity_numericUpDown";
+            this.quantity_numericUpDown.Size = new System.Drawing.Size(108, 27);
+            this.quantity_numericUpDown.TabIndex = 27;
+            this.quantity_numericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(465, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 25);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Chất liệu sản phẩm: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(465, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Số lượng còn lại: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(465, 195);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 25);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Quốc gia sản xuất: ";
+            // 
             // cButton1
             // 
             this.cButton1.BackColor = System.Drawing.Color.Red;
@@ -145,26 +192,17 @@ namespace ShoppingOnline.Control_Custom
             this.cButton1.Text = "Add to cart";
             this.cButton1.TextColor = System.Drawing.Color.White;
             this.cButton1.UseVisualStyleBackColor = false;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(470, 305);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(108, 27);
-            this.numericUpDown1.TabIndex = 27;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.cButton1.Click += new System.EventHandler(this.cButton1_Click);
             // 
             // DetailProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.quantity_numericUpDown);
             this.Controls.Add(this.cButton1);
             this.Controls.Add(this.pic_close);
             this.Controls.Add(this.lb_ten);
@@ -178,7 +216,7 @@ namespace ShoppingOnline.Control_Custom
             this.Size = new System.Drawing.Size(1054, 517);
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +232,9 @@ namespace ShoppingOnline.Control_Custom
         private System.Windows.Forms.Label lb_quocgia;
         public System.Windows.Forms.PictureBox pic_close;
         private CButton cButton1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown quantity_numericUpDown;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

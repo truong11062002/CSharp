@@ -14,6 +14,7 @@ namespace ShoppingOnline
 {
     public partial class main : Form
     {
+        private Form activeForm = null;
         public bool isClicked_Man = false;
         public bool isClicked_Women = false;
         public string prevState = "";
@@ -21,39 +22,33 @@ namespace ShoppingOnline
         static DataTable dt_search;
         static DataTable dt_filter;
         static DataTable dt;
-
         public main()
         {
             InitializeComponent();
+            Variable.ListControls.Add(pn_detail);
             Loading();
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Man_Move(object sender, MouseEventArgs e)
         {
 
             lb_man.ForeColor = Color.White;
         }
-
         private void Man_Leave(object sender, EventArgs e)
         {
             lb_man.ForeColor = Color.Black;
         }
-
         private void pn_man_MouseMove(object sender, MouseEventArgs e)
         {
 
         }
-
         private void pn_man_MouseLeave(object sender, EventArgs e)
         {
 
         }
-
         private void onClickMan(object sender, EventArgs e)
         {
             isClicked_Man = !isClicked_Man;
@@ -64,11 +59,9 @@ namespace ShoppingOnline
             pn_detail.Controls.Clear();
             Loading();
         }
-
         private void main_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'shoppingOnlineDataSet.PRODUCT' table. You can move, or remove it, as needed.
-            
             showItem();
         }
 
@@ -83,12 +76,10 @@ namespace ShoppingOnline
             Loading();
 
         }
-
         private void Women_move(object sender, MouseEventArgs e)
         {
             lb_women.ForeColor = Color.White;
         }
-
         private void Women_leave(object sender, EventArgs e)
         {
             lb_women.ForeColor = Color.Black;
@@ -101,22 +92,14 @@ namespace ShoppingOnline
         {
             lb_kids.ForeColor = Color.Black;
         }
-
         private void sw_move(object sender, MouseEventArgs e)
         {
             lb_sw.ForeColor = Color.Blue;
         }
-
         private void sw_leave(object sender, EventArgs e)
         {
             lb_sw.ForeColor = Color.Black;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Loading()
         {
             string query = "select * from PRODUCT where PRODUCT_ID like '" + State + "%'";
@@ -125,13 +108,10 @@ namespace ShoppingOnline
             dt = new DataTable();
             dt = provider.ExecuteQuery(query);
         }
-
         private void pant_move(object sender, MouseEventArgs e)
         {
             lb_pant.ForeColor = Color.Blue;
         }
-
-
         private void pant_leave(object sender, EventArgs e)
         {
             lb_pant.ForeColor = Color.Black;
@@ -145,12 +125,10 @@ namespace ShoppingOnline
         {
             lb_jacket.ForeColor = Color.Blue;
         }
-
         private void ts_move(object sender, MouseEventArgs e)
         {
             lb_ts.ForeColor = Color.Blue;
         }
-
         private void ts_leave(object sender, EventArgs e)
         {
             lb_ts.ForeColor = Color.Black;
@@ -172,7 +150,6 @@ namespace ShoppingOnline
                 flowLayoutPanel1.Controls.Add(it);
             }
         }
-
         private void ClickClose(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = true;
@@ -181,10 +158,9 @@ namespace ShoppingOnline
         }
         private void ClickDetail(object sender, EventArgs e)
         {
-
             CButton bt = (CButton)sender;
             DetailProduct dp = new DetailProduct(bt.Name);
-
+            // -------------------------------------------
             dp.pic_close.Click += new EventHandler(ClickClose);
             pn_detail.Controls.Add(dp);
             pn_detail.Visible = true;
@@ -193,7 +169,7 @@ namespace ShoppingOnline
         {
             prevState = State;
             State = "pant";
-
+            // -------------------------------------------
             Loading();
             showItem();
         }
@@ -202,6 +178,7 @@ namespace ShoppingOnline
         {
             prevState = State;
             State = "sw";
+            // -------------------------------------------
             Loading();
             showItem();
         }
@@ -209,6 +186,7 @@ namespace ShoppingOnline
         {
             prevState = State;
             State = "jacket";
+            // -------------------------------------------
             Loading();
             showItem();
         }
@@ -217,6 +195,7 @@ namespace ShoppingOnline
         {
             prevState = State;
             State = "ts";
+            // -------------------------------------------
             Loading();
             showItem();
         }
@@ -224,6 +203,7 @@ namespace ShoppingOnline
         {
             string query = "select * from PRODUCT where PRODUCT_NAME like '%" + txt_search + "%'";
             Data_Provider provider = new Data_Provider();
+            // -------------------------------------------
             dt_search = new DataTable();
             dt_search = provider.ExecuteQuery(query);
             return dt_search;
@@ -234,15 +214,14 @@ namespace ShoppingOnline
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < dt_search.Rows.Count; i++)
             {
-
                 string id = dt_search.Rows[i]["PRODUCT_ID"].ToString();
                 id = id.Replace(" ", "");
-
+                // -------------------------------------------
                 string name = dt_search.Rows[i]["PRODUCT_NAME"].ToString();
                 int price = Convert.ToInt32(dt_search.Rows[i]["PRODUCT_PRICE"]);
-
+                // -------------------------------------------
                 Control_Custom.Item it = new Control_Custom.Item(id, name, price.ToString());
-
+                // -------------------------------------------
                 it.btn_detail.Click += new EventHandler(ClickDetail);
                 flowLayoutPanel1.Controls.Add(it);
             }
@@ -319,14 +298,24 @@ namespace ShoppingOnline
 
         private void clickWhiteCart(object sender, EventArgs e)
         {
-            blackCart.Visible = true;
-            whiteCart.Visible = false;
+            openChildForm(new CartScreen());
         }
 
-        private void clickBlackCart(object sender, EventArgs e)
+        private void openChildForm(Form childForm)
         {
-            blackCart.Visible = false;
-            whiteCart.Visible = true;
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            
+            pn_detail.Controls.Add(childForm);
+            pn_detail.Tag = childForm;
+            pn_detail.Visible = true;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }
