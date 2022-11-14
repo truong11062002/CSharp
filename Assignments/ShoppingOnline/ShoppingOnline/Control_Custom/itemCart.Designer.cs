@@ -48,15 +48,15 @@ namespace ShoppingOnline.Control_Custom
             this.price_label.AutoSize = true;
             this.price_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.price_label.ForeColor = System.Drawing.Color.Red;
-            this.price_label.Location = new System.Drawing.Point(659, 97);
+            this.price_label.Location = new System.Drawing.Point(659, 110);
             this.price_label.Name = "price_label";
-            this.price_label.Size = new System.Drawing.Size(100, 39);
+            this.price_label.Size = new System.Drawing.Size(97, 38);
             this.price_label.TabIndex = 2;
             this.price_label.Text = "Price";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(735, 36);
+            this.richTextBox1.Location = new System.Drawing.Point(735, 49);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(52, 38);
             this.richTextBox1.TabIndex = 5;
@@ -85,6 +85,8 @@ namespace ShoppingOnline.Control_Custom
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(103, 66);
             this.checkBox1.Name = "checkBox1";
@@ -123,7 +125,7 @@ namespace ShoppingOnline.Control_Custom
             this.cButton2.FlatAppearance.BorderSize = 0;
             this.cButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cButton2.ForeColor = System.Drawing.Color.White;
-            this.cButton2.Location = new System.Drawing.Point(802, 31);
+            this.cButton2.Location = new System.Drawing.Point(802, 44);
             this.cButton2.Name = "cButton2";
             this.cButton2.Size = new System.Drawing.Size(52, 44);
             this.cButton2.TabIndex = 6;
@@ -141,7 +143,7 @@ namespace ShoppingOnline.Control_Custom
             this.cButton1.FlatAppearance.BorderSize = 0;
             this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cButton1.ForeColor = System.Drawing.Color.White;
-            this.cButton1.Location = new System.Drawing.Point(666, 31);
+            this.cButton1.Location = new System.Drawing.Point(666, 44);
             this.cButton1.Name = "cButton1";
             this.cButton1.Size = new System.Drawing.Size(52, 44);
             this.cButton1.TabIndex = 4;

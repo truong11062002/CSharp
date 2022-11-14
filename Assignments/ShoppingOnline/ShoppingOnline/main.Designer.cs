@@ -37,6 +37,7 @@ namespace ShoppingOnline
             this.txt_search = new System.Windows.Forms.TextBox();
             this.lb_man = new System.Windows.Forms.Label();
             this.lb_women = new System.Windows.Forms.Label();
+            this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.lb_kids = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@ namespace ShoppingOnline
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pn_detail = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -180,6 +180,25 @@ namespace ShoppingOnline
             this.lb_women.Click += new System.EventHandler(this.onClickWomen);
             this.lb_women.MouseLeave += new System.EventHandler(this.Women_leave);
             this.lb_women.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Women_move);
+            // 
+            // cButton1
+            // 
+            this.cButton1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.cButton1.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
+            this.cButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton1.BorderRadius = 20;
+            this.cButton1.BorderSize = 0;
+            this.cButton1.FlatAppearance.BorderSize = 0;
+            this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton1.ForeColor = System.Drawing.Color.Black;
+            this.cButton1.Location = new System.Drawing.Point(140, 18);
+            this.cButton1.Name = "cButton1";
+            this.cButton1.Size = new System.Drawing.Size(111, 53);
+            this.cButton1.TabIndex = 21;
+            this.cButton1.Text = "Lịch sử đặt hàng";
+            this.cButton1.TextColor = System.Drawing.Color.Black;
+            this.cButton1.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -575,25 +594,6 @@ namespace ShoppingOnline
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1267, 607);
             this.flowLayoutPanel1.TabIndex = 19;
             // 
-            // cButton1
-            // 
-            this.cButton1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.cButton1.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
-            this.cButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton1.BorderRadius = 20;
-            this.cButton1.BorderSize = 0;
-            this.cButton1.FlatAppearance.BorderSize = 0;
-            this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton1.ForeColor = System.Drawing.Color.Black;
-            this.cButton1.Location = new System.Drawing.Point(140, 18);
-            this.cButton1.Name = "cButton1";
-            this.cButton1.Size = new System.Drawing.Size(111, 53);
-            this.cButton1.TabIndex = 21;
-            this.cButton1.Text = "Lịch sử đặt hàng";
-            this.cButton1.TextColor = System.Drawing.Color.Black;
-            this.cButton1.UseVisualStyleBackColor = false;
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -610,6 +610,7 @@ namespace ShoppingOnline
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shopping Online";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_form_closing);
             this.Load += new System.EventHandler(this.main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
