@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -81,7 +99,24 @@
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeScreen.cs" />
+    <Compile Include="paymentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paymentScreen.Designer.cs">
+      <DependentUpon>paymentScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receipt.Designer.cs">
+      <DependentUpon>receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORT.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Resources\pants.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +127,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ShoppingOnlineDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ShoppingOnlineDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShoppingOnlineDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingOnlineDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShoppingOnlineDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Variable.cs" />
     <EmbeddedResource Include="CartScreen.resx">
       <DependentUpon>CartScreen.cs</DependentUpon>
@@ -108,6 +154,9 @@
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="paymentScreen.resx">
+      <DependentUpon>paymentScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,10 +166,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="receipt.resx">
+      <DependentUpon>receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\pants.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>pants.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,6 +186,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="REPORT.xsc">
+      <DependentUpon>REPORT.xsd</DependentUpon>
+    </None>
+    <None Include="REPORT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>REPORT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="REPORT.xss">
+      <DependentUpon>REPORT.xsd</DependentUpon>
+    </None>
     <None Include="ShoppingOnlineDataSet.xsc">
       <DependentUpon>ShoppingOnlineDataSet.xsd</DependentUpon>
     </None>
@@ -140,6 +207,28 @@
     </None>
     <None Include="ShoppingOnlineDataSet.xss">
       <DependentUpon>ShoppingOnlineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShoppingOnlineDataSet1.xsc">
+      <DependentUpon>ShoppingOnlineDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShoppingOnlineDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShoppingOnlineDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShoppingOnlineDataSet1.xss">
+      <DependentUpon>ShoppingOnlineDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShoppingOnlineDataSet2.xsc">
+      <DependentUpon>ShoppingOnlineDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ShoppingOnlineDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShoppingOnlineDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShoppingOnlineDataSet2.xss">
+      <DependentUpon>ShoppingOnlineDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -1251,6 +1340,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ts13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

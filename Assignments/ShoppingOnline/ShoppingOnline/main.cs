@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ShoppingOnline.Control_Custom;
+using System.Data.SqlClient;
 
 namespace ShoppingOnline
 {
@@ -22,6 +23,7 @@ namespace ShoppingOnline
         static DataTable dt_search;
         static DataTable dt_filter;
         static DataTable dt;
+        public static DataTable shopping;
         public main()
         {
             InitializeComponent();
@@ -61,6 +63,12 @@ namespace ShoppingOnline
         }
         private void main_Load(object sender, EventArgs e)
         {
+            shopping = new DataTable();
+            shopping.Columns.Add("ID", typeof(string));
+            shopping.Columns.Add("Name", typeof(string));
+            shopping.Columns.Add("Size", typeof(string));
+            shopping.Columns.Add("Quantity", typeof(int));
+            shopping.Columns.Add("Price", typeof(int));
             // TODO: This line of code loads data into the 'shoppingOnlineDataSet.PRODUCT' table. You can move, or remove it, as needed.
             showItem();
         }
@@ -299,6 +307,7 @@ namespace ShoppingOnline
         private void clickWhiteCart(object sender, EventArgs e)
         {
             openChildForm(new CartScreen());
+
         }
 
         private void openChildForm(Form childForm)
@@ -316,6 +325,20 @@ namespace ShoppingOnline
             pn_detail.Visible = true;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void main_form_closing(object sender, FormClosingEventArgs e)
+        {
+            ResetDB();
+        }
+        private void ResetDB()
+        {
+            string connectionString = "Data Source=DESKTOP-IUEIHA4;Initial Catalog=ShoppingOnline;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "TRUNCATE TABLE SHOPPINGPRODUCT";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
         }
     }
 }

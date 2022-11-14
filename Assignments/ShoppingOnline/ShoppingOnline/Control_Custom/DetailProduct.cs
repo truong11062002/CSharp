@@ -33,6 +33,7 @@ namespace ShoppingOnline.Control_Custom
             dt = new DataTable();
             dt = provider.ExecuteQuery(query);
             //----------------------------------------
+            lb_gia.Name = dt.Rows[0]["PRODUCT_PRICE"].ToString();
             lb_gia.Text = dt.Rows[0]["PRODUCT_PRICE"].ToString() + " $";
             quantity_numericUpDown.ValueChanged += new EventHandler(ChangeQuantity);
             lb_ten.Text = dt.Rows[0]["PRODUCT_NAME"].ToString();
@@ -68,7 +69,7 @@ namespace ShoppingOnline.Control_Custom
 
                 int tmp = provider.ExecuteNonQuery(query);
 
-                MessageBox.Show("Thêm dữ liệu thành công!");
+                MessageBox.Show("Thêm giỏ hàng thành công!");
             }
             else
             {
@@ -80,8 +81,17 @@ namespace ShoppingOnline.Control_Custom
                     $"and RECEIPT_DETAILS_SIZE = '{cb_size.Text}'";
 
                 int tmp = provider.ExecuteNonQuery(query);
-                MessageBox.Show("Cập nhật dữ liệu thành công!");
+                MessageBox.Show("Cập nhật giỏ hàng thành công!");
             }
+
+            // ----------------------------------------------------------------------
+            string id = pic_detail.Name;
+            string ten = lb_ten.Text;
+            string size = cb_size.SelectedItem.ToString();
+            string quantity = Convert.ToInt32(quantity_numericUpDown.Value).ToString();
+            int price = Convert.ToInt32(lb_gia.Name);
+            main.shopping.Rows.Add(id, ten, size, quantity, price);
         }
+
     }
 }
