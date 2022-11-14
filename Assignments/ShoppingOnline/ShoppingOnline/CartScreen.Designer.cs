@@ -30,7 +30,6 @@ namespace ShoppingOnline
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.price_num_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_buy = new ShoppingOnline.Control_Custom.CButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +41,6 @@ namespace ShoppingOnline
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.price_num_label);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btn_buy);
             this.panel1.Controls.Add(this.label1);
@@ -51,16 +49,6 @@ namespace ShoppingOnline
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1279, 100);
             this.panel1.TabIndex = 1;
-            // 
-            // price_num_label
-            // 
-            this.price_num_label.AutoSize = true;
-            this.price_num_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_num_label.Location = new System.Drawing.Point(187, 45);
-            this.price_num_label.Name = "price_num_label";
-            this.price_num_label.Size = new System.Drawing.Size(126, 29);
-            this.price_num_label.TabIndex = 3;
-            this.price_num_label.Text = "price_num";
             // 
             // label2
             // 
@@ -144,7 +132,6 @@ namespace ShoppingOnline
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label price_num_label;
         private System.Windows.Forms.Label label2;
         private Control_Custom.CButton btn_buy;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

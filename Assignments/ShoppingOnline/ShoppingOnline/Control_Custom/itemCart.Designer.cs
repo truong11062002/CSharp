@@ -31,7 +31,6 @@ namespace ShoppingOnline.Control_Custom
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(itemCart));
             this.price_label = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.name_label = new System.Windows.Forms.Label();
             this.size_label = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -40,6 +39,7 @@ namespace ShoppingOnline.Control_Custom
             this.cButton2 = new ShoppingOnline.Control_Custom.CButton();
             this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
             this.btn_remove = new ShoppingOnline.Control_Custom.CButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +53,6 @@ namespace ShoppingOnline.Control_Custom
             this.price_label.Size = new System.Drawing.Size(97, 38);
             this.price_label.TabIndex = 2;
             this.price_label.Text = "Price";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(735, 49);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(52, 38);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
             // 
             // name_label
             // 
@@ -170,18 +162,29 @@ namespace ShoppingOnline.Control_Custom
             this.btn_remove.UseVisualStyleBackColor = false;
             this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(750, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 31);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "1";
+            // 
             // itemCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pic_cart);
             this.Controls.Add(this.quantity_label);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.size_label);
             this.Controls.Add(this.name_label);
             this.Controls.Add(this.cButton2);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.cButton1);
             this.Controls.Add(this.price_label);
             this.Controls.Add(this.btn_remove);
@@ -197,12 +200,12 @@ namespace ShoppingOnline.Control_Custom
         private CButton btn_remove;
         private System.Windows.Forms.Label price_label;
         private CButton cButton1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private CButton cButton2;
         private System.Windows.Forms.Label name_label;
         private System.Windows.Forms.Label size_label;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label quantity_label;
         private System.Windows.Forms.PictureBox pic_cart;
+        private System.Windows.Forms.Label label1;
     }
 }

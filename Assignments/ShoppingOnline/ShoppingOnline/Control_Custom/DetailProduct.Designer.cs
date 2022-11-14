@@ -143,6 +143,7 @@ namespace ShoppingOnline.Control_Custom
             0,
             0,
             0});
+            this.quantity_numericUpDown.ValueChanged += new System.EventHandler(this.upDown_ValueChange);
             // 
             // label1
             // 

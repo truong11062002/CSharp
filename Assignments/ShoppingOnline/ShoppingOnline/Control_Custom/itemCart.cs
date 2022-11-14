@@ -37,6 +37,7 @@ namespace ShoppingOnline.Control_Custom
             size_label.Text = dtr["RECEIPT_DETAILS_SIZE"].ToString();
             quantity_label.Text = dtr["RECEIPT_DETAILS_QUATITY"].ToString();
             price_label.Text = dtr["PRODUCT_PRICE"].ToString() + " $";
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
