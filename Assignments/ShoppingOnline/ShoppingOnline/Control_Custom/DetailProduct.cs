@@ -15,11 +15,21 @@ namespace ShoppingOnline.Control_Custom
     {
         static DataTable dt;
         string get_id;
+        public long number;
         public DetailProduct()
         {
             InitializeComponent();
         }
 
+        private int total()
+        {
+            int total = 0;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                total += Int32.Parse(dt.Rows[i]["PRODUCT_PRICE"].ToString());
+            }
+            return total;
+        }
         public DetailProduct(string id) : this()
         {
             get_id = id;
@@ -35,19 +45,16 @@ namespace ShoppingOnline.Control_Custom
             //----------------------------------------
             lb_gia.Name = dt.Rows[0]["PRODUCT_PRICE"].ToString();
             lb_gia.Text = dt.Rows[0]["PRODUCT_PRICE"].ToString() + " $";
-            quantity_numericUpDown.ValueChanged += new EventHandler(ChangeQuantity);
             lb_ten.Text = dt.Rows[0]["PRODUCT_NAME"].ToString();
             lb_chatlieu.Text = dt.Rows[0]["PRODUCT_MATERIAL"].ToString();
             lb_quocgia.Text = dt.Rows[0]["PRODUCT_FROM"].ToString();
             lb_soluong.Text = dt.Rows[0]["PRODUCT_QUANTITY"].ToString();
+            //----------------------------------------
+            number = Convert.ToInt64(dt.Rows[0]["PRODUCT_PRICE"]);
 
         }
 
-        private void ChangeQuantity(object sender, EventArgs e)
-        {
-            //------------------- Đang fix ---------------------
-            lb_gia.Text = dt.Rows[0]["PRODUCT_PRICE"].ToString() + " $";
-        }
+
 
         private void cButton1_Click(object sender, EventArgs e)
         {
@@ -92,6 +99,29 @@ namespace ShoppingOnline.Control_Custom
             int price = Convert.ToInt32(lb_gia.Name);
             main.shopping.Rows.Add(id, ten, size, quantity, price);
         }
-
+        Decimal OldValue = 1;
+        private void upDown_ValueChange(object sender, EventArgs e)
+        {
+            if (quantity_numericUpDown.Value > OldValue)
+            {
+                number = number + Convert.ToInt64(dt.Rows[0]["PRODUCT_PRICE"]);
+                lb_gia.Text = number.ToString() + " $";
+                //value increased, handle accordingly
+            }
+            else if (quantity_numericUpDown.Value < OldValue)
+            {
+                number -= Convert.ToInt64(dt.Rows[0]["PRODUCT_PRICE"]);
+                lb_gia.Text = number.ToString() + " $";
+            }
+            else if(quantity_numericUpDown.Value == 0)
+            {
+                lb_gia.Text = "0 $";
+            }
+            else
+            {
+                return;
+            }
+            OldValue = quantity_numericUpDown.Value;
+        }
     }
 }
