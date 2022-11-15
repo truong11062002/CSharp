@@ -37,14 +37,12 @@ namespace ShoppingOnline
             this.txt_search = new System.Windows.Forms.TextBox();
             this.lb_man = new System.Windows.Forms.Label();
             this.lb_women = new System.Windows.Forms.Label();
-            this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.lb_kids = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_filter = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.whiteCart = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.blackHeart = new System.Windows.Forms.PictureBox();
@@ -72,9 +70,10 @@ namespace ShoppingOnline
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pn_detail = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).BeginInit();
@@ -90,6 +89,7 @@ namespace ShoppingOnline
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -181,25 +181,6 @@ namespace ShoppingOnline
             this.lb_women.MouseLeave += new System.EventHandler(this.Women_leave);
             this.lb_women.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Women_move);
             // 
-            // cButton1
-            // 
-            this.cButton1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.cButton1.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
-            this.cButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton1.BorderRadius = 20;
-            this.cButton1.BorderSize = 0;
-            this.cButton1.FlatAppearance.BorderSize = 0;
-            this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton1.ForeColor = System.Drawing.Color.Black;
-            this.cButton1.Location = new System.Drawing.Point(140, 18);
-            this.cButton1.Name = "cButton1";
-            this.cButton1.Size = new System.Drawing.Size(111, 53);
-            this.cButton1.TabIndex = 21;
-            this.cButton1.Text = "Lịch sử đặt hàng";
-            this.cButton1.TextColor = System.Drawing.Color.Black;
-            this.cButton1.UseVisualStyleBackColor = false;
-            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -280,19 +261,6 @@ namespace ShoppingOnline
             this.label5.Size = new System.Drawing.Size(56, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Gifts";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 60);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.clickLogo);
             // 
             // whiteCart
             // 
@@ -594,6 +562,38 @@ namespace ShoppingOnline
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1267, 607);
             this.flowLayoutPanel1.TabIndex = 19;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(134, 119);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.clickLogo);
+            // 
+            // cButton1
+            // 
+            this.cButton1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.cButton1.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
+            this.cButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton1.BorderRadius = 20;
+            this.cButton1.BorderSize = 0;
+            this.cButton1.FlatAppearance.BorderSize = 0;
+            this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton1.ForeColor = System.Drawing.Color.Black;
+            this.cButton1.Location = new System.Drawing.Point(140, 18);
+            this.cButton1.Name = "cButton1";
+            this.cButton1.Size = new System.Drawing.Size(111, 53);
+            this.cButton1.TabIndex = 21;
+            this.cButton1.Text = "Lịch sử đặt hàng";
+            this.cButton1.TextColor = System.Drawing.Color.Black;
+            this.cButton1.UseVisualStyleBackColor = false;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -616,7 +616,6 @@ namespace ShoppingOnline
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).EndInit();
@@ -634,6 +633,7 @@ namespace ShoppingOnline
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,7 +653,6 @@ namespace ShoppingOnline
         private System.Windows.Forms.PictureBox whiteHeart;
         private System.Windows.Forms.PictureBox blackHeart;
         private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pn_women;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
@@ -682,6 +681,7 @@ namespace ShoppingOnline
         public System.Windows.Forms.Panel pn_detail;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
