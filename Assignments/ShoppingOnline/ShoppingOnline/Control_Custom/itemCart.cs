@@ -42,7 +42,7 @@ namespace ShoppingOnline.Control_Custom
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_remove_Click(object sender, EventArgs e)

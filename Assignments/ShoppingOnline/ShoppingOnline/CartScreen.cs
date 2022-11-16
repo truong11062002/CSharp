@@ -16,7 +16,6 @@ namespace ShoppingOnline
 {
     public partial class CartScreen : Form
     {
-
         public static DataTable shopping;
         public CartScreen()
         {
