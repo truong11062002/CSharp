@@ -340,5 +340,10 @@ namespace ShoppingOnline
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
         }
+
+        private void cButton1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new f_History());
+        }
     }
 }
