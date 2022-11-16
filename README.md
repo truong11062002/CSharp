@@ -35,7 +35,7 @@
 
 [Mini game learn english for kids](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/TH01)
 
-Mô tả:
+Mô tả yêu cầu:
 * Game học từ vựng tiếng anh theo chủ đề: fruit, animal, vehicle, occupation 
 * Ý tưởng chơi game: hiển thị ảnh và yêu cầu nhập vào 1 từ tiếng Anh chỉ đối tượng trong ảnh -> kết quả đúng sai và điểm số.
 * Game dành cho thiếu nhi nên cần chú ý về giao diện, hình ảnh trong game sinh động, dễ thương.
@@ -44,6 +44,16 @@ Mô tả:
 ![homescreen](https://i.imgur.com/z1i60kw.png)
 
 ### Excercise 02: Shopping online
+Mô tả yêu cầu:
+* Connect với SQL server database
+* Danh mục sản phẩm: Show các loại sản phẩm hiện có của ứng dụng
+* Thể hiện thông tin chi tiết từng sản phẩm
+* Thông tin hiển thị: Hình ảnh, Giá, Số lượng, Ngày sản xuất, Xuất xứ, Size, Color
+* Đặt hàng: Chọn sản phẩm, số lượng, giá, thành tiền, mã khuyến mãi
+* Thêm vào giỏ hàng
+* Tìm kiếm và lọc sản phẩm theo nội dung thông tin sản phẩm
+* In hóa đơn khi hoàn tất đặt hàng/ thanh toán
+
 <a name ="QT"></a>
 ### 3. Quá trình trên lớp
 [Thiết kế giao diện theo mẫu](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/week01)
