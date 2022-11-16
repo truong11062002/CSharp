@@ -133,7 +133,7 @@ namespace ShoppingOnline.Control_Custom
             this.Controls.Add(this.name_label);
             this.Controls.Add(this.history_pic);
             this.Name = "itemHistory";
-            this.Size = new System.Drawing.Size(1004, 158);
+            this.Size = new System.Drawing.Size(1392, 158);
             ((System.ComponentModel.ISupportInitialize)(this.history_pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

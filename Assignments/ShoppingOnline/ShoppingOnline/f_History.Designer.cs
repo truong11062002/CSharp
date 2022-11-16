@@ -38,7 +38,7 @@ namespace ShoppingOnline
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(115, -1);
+            this.label1.Location = new System.Drawing.Point(218, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(833, 82);
             this.label1.TabIndex = 0;
@@ -49,14 +49,14 @@ namespace ShoppingOnline
             // 
             this.history_flowLayoutPanel.Location = new System.Drawing.Point(3, 69);
             this.history_flowLayoutPanel.Name = "history_flowLayoutPanel";
-            this.history_flowLayoutPanel.Size = new System.Drawing.Size(1073, 851);
+            this.history_flowLayoutPanel.Size = new System.Drawing.Size(1273, 851);
             this.history_flowLayoutPanel.TabIndex = 1;
             // 
             // f_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 952);
+            this.ClientSize = new System.Drawing.Size(1288, 952);
             this.Controls.Add(this.history_flowLayoutPanel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

@@ -24,6 +24,7 @@ namespace ShoppingOnline
         static DataTable dt_filter;
         static DataTable dt;
         public static DataTable shopping;
+        public static bool showHistory = false;
         public main()
         {
             InitializeComponent();
@@ -307,7 +308,7 @@ namespace ShoppingOnline
         private void clickWhiteCart(object sender, EventArgs e)
         {
             openChildForm(new CartScreen());
-
+            
         }
 
         private void openChildForm(Form childForm)
@@ -323,9 +324,14 @@ namespace ShoppingOnline
             pn_detail.Controls.Add(childForm);
             pn_detail.Tag = childForm;
             pn_detail.Visible = true;
+            
             childForm.BringToFront();
+            
             childForm.Show();
         }
+
+        
+
 
         private void main_form_closing(object sender, FormClosingEventArgs e)
         {
