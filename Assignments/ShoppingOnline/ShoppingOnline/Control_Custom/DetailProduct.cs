@@ -142,5 +142,15 @@ namespace ShoppingOnline.Control_Custom
             if (second_pictureBox.Visible == true)
                 main.lovelist.Rows.Add(get_id, lb_ten.Text);
         }
+
+        private void DetailProduct_Load(object sender, EventArgs e)
+        {
+            foreach (DataRow row in main.lovelist.Rows)
+                if (get_id == row["ID"].ToString())
+                {
+                    second_pictureBox.Visible = true;
+                    first_pictureBox.Visible = false;
+                }
+        }
     }
 }
