@@ -245,6 +245,7 @@ namespace ShoppingOnline.Control_Custom
             this.Controls.Add(this.lb_quocgia);
             this.Name = "DetailProduct";
             this.Size = new System.Drawing.Size(1054, 517);
+            this.Load += new System.EventHandler(this.DetailProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_numericUpDown)).EndInit();

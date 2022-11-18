@@ -38,7 +38,7 @@ namespace ShoppingOnline
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(204, 7);
+            this.label1.Location = new System.Drawing.Point(204, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(833, 82);
             this.label1.TabIndex = 1;
@@ -47,9 +47,10 @@ namespace ShoppingOnline
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1255, 805);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1255, 895);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // f_Heart
@@ -57,7 +58,7 @@ namespace ShoppingOnline
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1288, 952);
+            this.ClientSize = new System.Drawing.Size(1288, 984);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "f_Heart";
