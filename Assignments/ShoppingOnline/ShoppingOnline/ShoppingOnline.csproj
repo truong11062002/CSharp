@@ -98,6 +98,12 @@
       <DependentUpon>itemHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\Data_Provider.cs" />
+    <Compile Include="f_Heart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Heart.Designer.cs">
+      <DependentUpon>f_Heart.cs</DependentUpon>
+    </Compile>
     <Compile Include="f_History.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control_Custom\itemHistory.resx">
       <DependentUpon>itemHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Heart.resx">
+      <DependentUpon>f_Heart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f_History.resx">
       <DependentUpon>f_History.cs</DependentUpon>

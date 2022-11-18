@@ -47,7 +47,6 @@ namespace ShoppingOnline
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.whiteCart = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.blackHeart = new System.Windows.Forms.PictureBox();
             this.whiteHeart = new System.Windows.Forms.PictureBox();
             this.pn_women = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -77,7 +76,6 @@ namespace ShoppingOnline
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteHeart)).BeginInit();
             this.pn_women.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -133,7 +131,6 @@ namespace ShoppingOnline
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.whiteCart);
             this.panel2.Controls.Add(this.pictureBox8);
-            this.panel2.Controls.Add(this.blackHeart);
             this.panel2.Controls.Add(this.whiteHeart);
             this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
@@ -317,19 +314,6 @@ namespace ShoppingOnline
             this.pictureBox8.Size = new System.Drawing.Size(34, 32);
             this.pictureBox8.TabIndex = 8;
             this.pictureBox8.TabStop = false;
-            // 
-            // blackHeart
-            // 
-            this.blackHeart.BackColor = System.Drawing.Color.Transparent;
-            this.blackHeart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blackHeart.BackgroundImage")));
-            this.blackHeart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.blackHeart.Location = new System.Drawing.Point(937, 39);
-            this.blackHeart.Name = "blackHeart";
-            this.blackHeart.Size = new System.Drawing.Size(34, 32);
-            this.blackHeart.TabIndex = 10;
-            this.blackHeart.TabStop = false;
-            this.blackHeart.Visible = false;
-            this.blackHeart.Click += new System.EventHandler(this.clickBlackHeart);
             // 
             // whiteHeart
             // 
@@ -620,7 +604,6 @@ namespace ShoppingOnline
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackHeart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteHeart)).EndInit();
             this.pn_women.ResumeLayout(false);
             this.pn_women.PerformLayout();
@@ -652,7 +635,6 @@ namespace ShoppingOnline
         private System.Windows.Forms.PictureBox whiteCart;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox whiteHeart;
-        private System.Windows.Forms.PictureBox blackHeart;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Panel pn_women;
         private System.Windows.Forms.Label label10;

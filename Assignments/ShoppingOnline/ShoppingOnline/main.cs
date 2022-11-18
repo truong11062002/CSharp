@@ -23,7 +23,7 @@ namespace ShoppingOnline
         static DataTable dt_search;
         static DataTable dt_filter;
         static DataTable dt;
-        public static DataTable shopping;
+        public static DataTable shopping, lovelist;
         public static bool showHistory = false;
         public main()
         {
@@ -70,6 +70,11 @@ namespace ShoppingOnline
             shopping.Columns.Add("Size", typeof(string));
             shopping.Columns.Add("Quantity", typeof(int));
             shopping.Columns.Add("Price", typeof(int));
+
+
+            lovelist = new DataTable();
+            lovelist.Columns.Add("ID", typeof(string));
+            lovelist.Columns.Add("Name", typeof(string));
             // TODO: This line of code loads data into the 'shoppingOnlineDataSet.PRODUCT' table. You can move, or remove it, as needed.
             showItem();
         }
@@ -277,15 +282,9 @@ namespace ShoppingOnline
 
         private void clickHeart(object sender, EventArgs e)
         {
-            blackHeart.Visible = true;
-            whiteHeart.Visible = false;
+            openChildForm(new f_Heart());
         }
 
-        private void clickBlackHeart(object sender, EventArgs e)
-        {
-            blackHeart.Visible = false;
-            whiteHeart.Visible = true;
-        }
 
         private void KeyDownSearch(object sender, KeyEventArgs e)
         {
