@@ -79,5 +79,19 @@ namespace ShoppingOnline.Control_Custom
         {
 
         }
+
+        private void cButton2_Click(object sender, EventArgs e)
+        {
+            this.soluong_label.Text = (int.Parse(this.soluong_label.Text) + 1).ToString();
+        }
+
+        private void cButton1_Click(object sender, EventArgs e)
+        {
+            this.soluong_label.Text = (int.Parse(this.soluong_label.Text) - 1).ToString();
+            if(int.Parse(this.soluong_label.Text) < 0)
+            {
+                soluong_label.Text = "0";
+            }
+        }
     }
 }
