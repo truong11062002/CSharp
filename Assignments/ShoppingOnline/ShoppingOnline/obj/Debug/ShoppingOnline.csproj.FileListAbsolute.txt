@@ -79,3 +79,4 @@ C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\RdlCompile.comp
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\bin\Debug\Report1.rdlc
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.f_History.resources
 C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Control_Custom.itemHistory.resources
+C:\CS511.N11\Assignments\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.f_Heart.resources

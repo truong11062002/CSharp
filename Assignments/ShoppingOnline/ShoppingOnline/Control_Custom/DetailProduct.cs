@@ -123,5 +123,24 @@ namespace ShoppingOnline.Control_Custom
             }
             OldValue = quantity_numericUpDown.Value;
         }
+
+        private void first_pictureBox_Click(object sender, EventArgs e)
+        {
+            second_pictureBox.Visible = true;
+            first_pictureBox.Visible = false;
+            
+        }
+
+        private void second_pictureBox_Click(object sender, EventArgs e)
+        {
+            first_pictureBox.Visible = true;
+            second_pictureBox.Visible = false;
+        }
+
+        private void pic_close_Click(object sender, EventArgs e)
+        {
+            if (second_pictureBox.Visible == true)
+                main.lovelist.Rows.Add(get_id, lb_ten.Text);
+        }
     }
 }

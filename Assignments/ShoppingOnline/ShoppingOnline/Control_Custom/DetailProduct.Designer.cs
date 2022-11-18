@@ -42,10 +42,14 @@ namespace ShoppingOnline.Control_Custom
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.first_pictureBox = new System.Windows.Forms.PictureBox();
+            this.second_pictureBox = new System.Windows.Forms.PictureBox();
             this.cButton1 = new ShoppingOnline.Control_Custom.CButton();
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.first_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.second_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_ten
@@ -130,6 +134,7 @@ namespace ShoppingOnline.Control_Custom
             this.pic_close.Size = new System.Drawing.Size(38, 36);
             this.pic_close.TabIndex = 25;
             this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
             // 
             // quantity_numericUpDown
             // 
@@ -175,6 +180,29 @@ namespace ShoppingOnline.Control_Custom
             this.label3.TabIndex = 29;
             this.label3.Text = "Quốc gia sản xuất: ";
             // 
+            // first_pictureBox
+            // 
+            this.first_pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("first_pictureBox.BackgroundImage")));
+            this.first_pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.first_pictureBox.Location = new System.Drawing.Point(662, 387);
+            this.first_pictureBox.Name = "first_pictureBox";
+            this.first_pictureBox.Size = new System.Drawing.Size(78, 63);
+            this.first_pictureBox.TabIndex = 31;
+            this.first_pictureBox.TabStop = false;
+            this.first_pictureBox.Click += new System.EventHandler(this.first_pictureBox_Click);
+            // 
+            // second_pictureBox
+            // 
+            this.second_pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("second_pictureBox.BackgroundImage")));
+            this.second_pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.second_pictureBox.Location = new System.Drawing.Point(662, 387);
+            this.second_pictureBox.Name = "second_pictureBox";
+            this.second_pictureBox.Size = new System.Drawing.Size(78, 63);
+            this.second_pictureBox.TabIndex = 32;
+            this.second_pictureBox.TabStop = false;
+            this.second_pictureBox.Visible = false;
+            this.second_pictureBox.Click += new System.EventHandler(this.second_pictureBox_Click);
+            // 
             // cButton1
             // 
             this.cButton1.BackColor = System.Drawing.Color.Red;
@@ -200,6 +228,8 @@ namespace ShoppingOnline.Control_Custom
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
+            this.Controls.Add(this.second_pictureBox);
+            this.Controls.Add(this.first_pictureBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -218,6 +248,8 @@ namespace ShoppingOnline.Control_Custom
             ((System.ComponentModel.ISupportInitialize)(this.pic_detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.first_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.second_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +269,7 @@ namespace ShoppingOnline.Control_Custom
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox first_pictureBox;
+        private System.Windows.Forms.PictureBox second_pictureBox;
     }
 }
