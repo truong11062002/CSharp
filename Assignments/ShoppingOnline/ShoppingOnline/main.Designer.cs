@@ -204,7 +204,7 @@ namespace ShoppingOnline
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(519, 36);
+            this.label6.Location = new System.Drawing.Point(525, 36);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 25);
             this.label6.TabIndex = 3;
