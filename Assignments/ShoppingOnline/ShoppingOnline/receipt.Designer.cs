@@ -37,14 +37,14 @@ namespace ShoppingOnline
             this.reportViewer1.Location = new System.Drawing.Point(2, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1022, 823);
+            this.reportViewer1.Size = new System.Drawing.Size(777, 823);
             this.reportViewer1.TabIndex = 0;
             // 
             // receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 839);
+            this.ClientSize = new System.Drawing.Size(773, 839);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "receipt";
