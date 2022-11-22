@@ -46,6 +46,7 @@ Mô tả yêu cầu:
 ### Excercise 02: Shopping online
 
 [Shopping online](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/ShoppingOnline)
+
 Mô tả yêu cầu:
 * Connect với SQL server database
 * Danh mục sản phẩm: Show các loại sản phẩm hiện có của ứng dụng
