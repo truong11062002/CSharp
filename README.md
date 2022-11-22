@@ -31,9 +31,9 @@
 <a name ="colab"></a>
 ### 2. Assignments
 
-### Excercise 01: Mini game learn english for kids
+### Excercise 01: Mini English Game for Children
 
-[Mini game learn english for kids](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/GameLearnEnglish)
+[Mini English Game for Children](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/GameLearnEnglish)
 
 Mô tả yêu cầu:
 * Game học từ vựng tiếng anh theo chủ đề: fruit, animal, vehicle, occupation 
