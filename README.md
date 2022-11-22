@@ -54,6 +54,8 @@ Mô tả yêu cầu:
 * Tìm kiếm và lọc sản phẩm theo nội dung thông tin sản phẩm
 * In hóa đơn khi hoàn tất đặt hàng/ thanh toán
 
+![image](https://user-images.githubusercontent.com/74360292/203362768-cdcf4be5-9341-4926-99b0-ae553de1c96a.png)
+
 <a name ="QT"></a>
 ### 3. Quá trình trên lớp
 [Thiết kế giao diện theo mẫu](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/week01)
