@@ -33,7 +33,7 @@
 
 ### Excercise 01: Mini game learn english for kids
 
-[Mini game learn english for kids](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/TH01)
+[Mini game learn english for kids](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/GameLearnEnglish)
 
 Mô tả yêu cầu:
 * Game học từ vựng tiếng anh theo chủ đề: fruit, animal, vehicle, occupation 
@@ -44,6 +44,8 @@ Mô tả yêu cầu:
 ![homescreen](https://i.imgur.com/z1i60kw.png)
 
 ### Excercise 02: Shopping online
+
+[Shopping online](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/ShoppingOnline)
 Mô tả yêu cầu:
 * Connect với SQL server database
 * Danh mục sản phẩm: Show các loại sản phẩm hiện có của ứng dụng
