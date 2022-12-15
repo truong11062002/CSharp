@@ -14,3 +14,11 @@ C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.Co
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.item.resources
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.image.resources
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.DetailMusic.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\Interop.WMPLib.dll
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\AxInterop.WMPLib.dll
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.ResolveComReference.cache
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.PlayMusic.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.ListLove.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.love.resources

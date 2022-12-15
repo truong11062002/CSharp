@@ -33,16 +33,6 @@ namespace MusicPlayer
             iconButton1.BackColor = Color.AliceBlue;
         }
 
-        private void iconButton2_MouseMove(object sender, MouseEventArgs e)
-        {
-            iconButton2.BackColor = Color.CadetBlue;
-        }
-
-        private void iconButton2_MouseLeave(object sender, EventArgs e)
-        {
-            iconButton2.BackColor = Color.AliceBlue;
-        }
-
         private void iconButton3_MouseMove(object sender, MouseEventArgs e)
         {
             iconButton3.BackColor = Color.CadetBlue;
@@ -184,7 +174,13 @@ namespace MusicPlayer
                          "or (dbo.LanguageComprehension(singer_name) like N'%" + TextBox_MusicSearch.Text + "%' " +
                          "or singer_name like N'%" + TextBox_MusicSearch.Text + "%')";
             }
-            
+
+            ShowAllMusic(query);
+        }
+
+        private void Filter(string country)
+        {
+            string query = $"select * from MUSIC where music_category like N'{country}'";
             ShowAllMusic(query);
         }
 
@@ -211,12 +207,12 @@ namespace MusicPlayer
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Loading();
-            ShowAllMusic("select * from MUSIC");
+            ResetHomePage("select * from MUSIC", iconButton1);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -248,6 +244,66 @@ namespace MusicPlayer
             char ch = e.KeyChar;
             if (ch == (char)13)
                 FilterMusic();
+        }
+
+        private void CloseForm()
+        {
+            if (Application.OpenForms.OfType<PlayMusic>().Count() == 1)
+                Application.OpenForms.OfType<PlayMusic>().First().Close();
+        }
+        private void ResetHomePage(string query, Button btn = null)
+        {
+            TextBox_MusicSearch.Text = "Tên bài hát, tên ca sĩ, ...";
+            TextBox_MusicSearch.ForeColor = Color.Gray;
+
+            CloseForm();
+            ShowAllMusic(query);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Loading();
+            ResetHomePage("select * from MUSIC", iconButton1);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Filter("US/UK");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Filter("vietnam");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Filter("rap");
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Filter("pop");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Filter("remix");
         }
     }
 }

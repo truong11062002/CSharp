@@ -38,9 +38,11 @@ namespace MusicPlayer
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.TextBox_MusicSearch = new System.Windows.Forms.TextBox();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -53,21 +55,18 @@ namespace MusicPlayer
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.TextBox_MusicSearch = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,6 +99,7 @@ namespace MusicPlayer
             this.pictureBox1.Size = new System.Drawing.Size(179, 130);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -108,7 +108,6 @@ namespace MusicPlayer
             this.panel2.Controls.Add(this.iconButton5);
             this.panel2.Controls.Add(this.iconButton4);
             this.panel2.Controls.Add(this.iconButton3);
-            this.panel2.Controls.Add(this.iconButton2);
             this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Location = new System.Drawing.Point(2, 151);
             this.panel2.MaximumSize = new System.Drawing.Size(238, 672);
@@ -144,7 +143,7 @@ namespace MusicPlayer
             this.iconButton5.IconColor = System.Drawing.Color.DeepSkyBlue;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(33, 293);
+            this.iconButton5.Location = new System.Drawing.Point(33, 224);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(165, 56);
             this.iconButton5.TabIndex = 5;
@@ -152,6 +151,7 @@ namespace MusicPlayer
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             this.iconButton5.MouseLeave += new System.EventHandler(this.iconButton5_MouseLeave);
             this.iconButton5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.iconButton5_MouseMove);
             // 
@@ -163,7 +163,7 @@ namespace MusicPlayer
             this.iconButton4.IconColor = System.Drawing.Color.DeepSkyBlue;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(33, 222);
+            this.iconButton4.Location = new System.Drawing.Point(33, 153);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(165, 56);
             this.iconButton4.TabIndex = 4;
@@ -171,6 +171,7 @@ namespace MusicPlayer
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             this.iconButton4.MouseLeave += new System.EventHandler(this.iconButton4_MouseLeave);
             this.iconButton4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.iconButton4_MouseMove);
             // 
@@ -182,7 +183,7 @@ namespace MusicPlayer
             this.iconButton3.IconColor = System.Drawing.Color.DeepSkyBlue;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(33, 149);
+            this.iconButton3.Location = new System.Drawing.Point(33, 80);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(165, 56);
             this.iconButton3.TabIndex = 3;
@@ -190,28 +191,9 @@ namespace MusicPlayer
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             this.iconButton3.MouseLeave += new System.EventHandler(this.iconButton3_MouseLeave);
             this.iconButton3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.iconButton3_MouseMove);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.AliceBlue;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Table;
-            this.iconButton2.IconColor = System.Drawing.Color.DeepSkyBlue;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(33, 78);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(165, 56);
-            this.iconButton2.TabIndex = 2;
-            this.iconButton2.Text = "Category";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            this.iconButton2.MouseLeave += new System.EventHandler(this.iconButton2_MouseLeave);
-            this.iconButton2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.iconButton2_MouseMove);
             // 
             // iconButton1
             // 
@@ -253,6 +235,42 @@ namespace MusicPlayer
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1242, 100);
             this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.TextBox_MusicSearch);
+            this.panel5.Controls.Add(this.iconButton7);
+            this.panel5.Location = new System.Drawing.Point(20, 19);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(358, 57);
+            this.panel5.TabIndex = 11;
+            // 
+            // TextBox_MusicSearch
+            // 
+            this.TextBox_MusicSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox_MusicSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_MusicSearch.ForeColor = System.Drawing.Color.Gray;
+            this.TextBox_MusicSearch.Location = new System.Drawing.Point(8, 17);
+            this.TextBox_MusicSearch.Name = "TextBox_MusicSearch";
+            this.TextBox_MusicSearch.Size = new System.Drawing.Size(278, 27);
+            this.TextBox_MusicSearch.TabIndex = 1;
+            this.TextBox_MusicSearch.Text = "Tên bài hát, tên ca sĩ, ...";
+            this.TextBox_MusicSearch.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.TextBox_MusicSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_MusicSearch_KeyPress);
+            this.TextBox_MusicSearch.Leave += new System.EventHandler(this.TextBox_MusicSearch_Leave);
+            // 
+            // iconButton7
+            // 
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton7.IconColor = System.Drawing.Color.Black;
+            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton7.Location = new System.Drawing.Point(292, 3);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Size = new System.Drawing.Size(63, 52);
+            this.iconButton7.TabIndex = 0;
+            this.iconButton7.UseVisualStyleBackColor = true;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
             // 
             // pictureBox7
             // 
@@ -313,6 +331,7 @@ namespace MusicPlayer
             this.label5.Size = new System.Drawing.Size(88, 29);
             this.label5.TabIndex = 5;
             this.label5.Text = "REMIX";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
             this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
             // 
@@ -325,6 +344,7 @@ namespace MusicPlayer
             this.label4.Size = new System.Drawing.Size(58, 29);
             this.label4.TabIndex = 4;
             this.label4.Text = "POP";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label4_MouseMove);
             // 
@@ -337,6 +357,7 @@ namespace MusicPlayer
             this.label3.Size = new System.Drawing.Size(60, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "RAP";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label3_MouseMove);
             // 
@@ -349,6 +370,7 @@ namespace MusicPlayer
             this.label2.Size = new System.Drawing.Size(115, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "VIETNAM";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label2_MouseMove);
             // 
@@ -361,6 +383,7 @@ namespace MusicPlayer
             this.label1.Size = new System.Drawing.Size(84, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "US/UK";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
@@ -382,42 +405,6 @@ namespace MusicPlayer
             this.main_panel.Size = new System.Drawing.Size(1242, 728);
             this.main_panel.TabIndex = 2;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.TextBox_MusicSearch);
-            this.panel5.Controls.Add(this.iconButton7);
-            this.panel5.Location = new System.Drawing.Point(20, 19);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(358, 57);
-            this.panel5.TabIndex = 11;
-            // 
-            // iconButton7
-            // 
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton7.IconColor = System.Drawing.Color.Black;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(292, 3);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(63, 52);
-            this.iconButton7.TabIndex = 0;
-            this.iconButton7.UseVisualStyleBackColor = true;
-            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
-            // 
-            // TextBox_MusicSearch
-            // 
-            this.TextBox_MusicSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBox_MusicSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_MusicSearch.ForeColor = System.Drawing.Color.Gray;
-            this.TextBox_MusicSearch.Location = new System.Drawing.Point(8, 17);
-            this.TextBox_MusicSearch.Name = "TextBox_MusicSearch";
-            this.TextBox_MusicSearch.Size = new System.Drawing.Size(278, 27);
-            this.TextBox_MusicSearch.TabIndex = 1;
-            this.TextBox_MusicSearch.Text = "Tên bài hát, tên ca sĩ, ...";
-            this.TextBox_MusicSearch.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.TextBox_MusicSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_MusicSearch_KeyPress);
-            this.TextBox_MusicSearch.Leave += new System.EventHandler(this.TextBox_MusicSearch_Leave);
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -436,14 +423,14 @@ namespace MusicPlayer
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -456,7 +443,6 @@ namespace MusicPlayer
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
