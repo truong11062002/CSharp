@@ -51,6 +51,20 @@ namespace ShoppingOnline
                 reportViewer1.LocalReport.DataSources.Add(rds);
                 //reportViewer1.RefreshReport();
             }
+
+
+            ReportParameter para1 = new ReportParameter();
+            para1.Name = "name"; //Đặt đúng tên khi đặt trong report
+            para1.Values.Add(User.name);
+
+            ReportParameter para2 = new ReportParameter();
+            para2.Name = "address";
+            para2.Values.Add(User.address);
+            ReportParameter para3 = new ReportParameter();
+            para3.Name = "phone";
+            para3.Values.Add(User.phone);
+
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[] { para1, para2, para3 });
         }
 
         private void receipt_form_closing(object sender, FormClosingEventArgs e)

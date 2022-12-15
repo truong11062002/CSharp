@@ -43,8 +43,8 @@ namespace ShoppingOnline
         private void cButton1_Click(object sender, EventArgs e)
         {
             SaveData(main.shopping);
-            receipt f_receipt = new receipt();
-            f_receipt.Show();
+            User f_user = new User();
+            f_user.Show();
         }
 
         private void CartScreen_Load(object sender, EventArgs e)
