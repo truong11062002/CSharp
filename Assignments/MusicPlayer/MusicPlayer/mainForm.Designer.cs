@@ -118,6 +118,7 @@ namespace MusicPlayer
             // iconButton6
             // 
             this.iconButton6.BackColor = System.Drawing.Color.AliceBlue;
+            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Backward;
             this.iconButton6.IconColor = System.Drawing.Color.Tomato;
@@ -138,6 +139,7 @@ namespace MusicPlayer
             // iconButton5
             // 
             this.iconButton5.BackColor = System.Drawing.Color.AliceBlue;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.iconButton5.IconColor = System.Drawing.Color.DeepSkyBlue;
@@ -158,6 +160,7 @@ namespace MusicPlayer
             // iconButton4
             // 
             this.iconButton4.BackColor = System.Drawing.Color.AliceBlue;
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.HeartCirclePlus;
             this.iconButton4.IconColor = System.Drawing.Color.DeepSkyBlue;
@@ -178,6 +181,7 @@ namespace MusicPlayer
             // iconButton3
             // 
             this.iconButton3.BackColor = System.Drawing.Color.AliceBlue;
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ListDots;
             this.iconButton3.IconColor = System.Drawing.Color.DeepSkyBlue;
@@ -198,6 +202,7 @@ namespace MusicPlayer
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.AliceBlue;
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton1.IconColor = System.Drawing.Color.DeepSkyBlue;
@@ -325,6 +330,7 @@ namespace MusicPlayer
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(460, 33);
             this.label5.Name = "label5";
@@ -338,6 +344,7 @@ namespace MusicPlayer
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(631, 33);
             this.label4.Name = "label4";
@@ -351,6 +358,7 @@ namespace MusicPlayer
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(771, 33);
             this.label3.Name = "label3";
@@ -364,6 +372,7 @@ namespace MusicPlayer
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(907, 34);
             this.label2.Name = "label2";
@@ -377,6 +386,7 @@ namespace MusicPlayer
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Stencil", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1093, 33);
             this.label1.Name = "label1";

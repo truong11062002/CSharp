@@ -11,37 +11,24 @@ using System.Windows.Forms;
 
 namespace MusicPlayer.CustomControl
 {
-    public partial class love : UserControl
+    public partial class history : UserControl
     {
-        string status;
-        string id;
         private Form activeForm = null;
-        public love()
+        string id_history_global;
+        public history()
         {
             InitializeComponent();
         }
 
-        public love(Bitmap bm, DataRow dr) : this()
+        public history(Bitmap bm, DataRow dr): this()
         {
             pictureBox1.BackgroundImage = bm;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
 
             label_tennhac.Text = dr["music_name"].ToString();
             label_tencasi.Text = dr["singer_name"].ToString();
-            label_namph.Text = dr["music_release"].ToString();
-
-            id = dr["music_id"].ToString();
-            status = dr["music_love_status"].ToString();
-        }
-        
-        private void cButton1_Click(object sender, EventArgs e)
-        {
-            Bitmap myImage = (Bitmap)image.ResourceManager.GetObject(id);
-
-            DataProvider provider = new DataProvider();
-            string query = $"select * from MUSIC where music_id = '{id}'";
-            DataTable dt = provider.ExecuteQuery(query);
-            openChildForm(new DetailMusic(myImage, dt));
+            label_thoigian.Text = dr["history_music_time"].ToString();
+            id_history_global = dr["history_music_id"].ToString();
         }
 
         private void openChildForm(Form childForm)
@@ -58,19 +45,16 @@ namespace MusicPlayer.CustomControl
             childForm.BringToFront();
             childForm.Show();
         }
-
-        private void cButton2_Click(object sender, EventArgs e)
+        private void cButton1_Click(object sender, EventArgs e)
         {
             DataProvider provider = new DataProvider();
 
-            //string query = $"delete from FAVORITE_MOVIE_LIST where FAVORITE_MOVIE_ID = '{Label_MovieName.Name}'";
-            int i;
-            if (status == "1") i = 0;
-            else i = 1;
-            string query = $"update MUSIC set music_love_status = {i} where music_id = '{id}'";
+            string query = $"delete from HISTORY_MUSIC_LIST where history_music_id = '{id_history_global}'";
+            
+            //string query = $"update MUSIC set music_love_status = {i} where music_id = '{id}'";
 
             provider.ExecuteNonQuery(query);
-            openChildForm(new ListLove());
+            openChildForm(new FormHistory());
         }
     }
 }

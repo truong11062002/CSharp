@@ -1,4 +1,5 @@
-﻿using MusicPlayer.DAO;
+﻿using FontAwesome.Sharp;
+using MusicPlayer.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,10 @@ namespace MusicPlayer
     public partial class DetailMusic : Form
     {
         DataTable dt_global;
-        string status;
+        string status = "0";
         private Form activeForm = null;
+        string id_global;
+        int countNumOfView;
         public DetailMusic()
         {
             InitializeComponent();
@@ -40,7 +43,8 @@ namespace MusicPlayer
             label_luotnghe.Text = dr["music_freq"].ToString();
             label_quocgia.Text = dr["music_country"].ToString();
             richTextBox_loibaihat.Text = dr["music_lyric"].ToString();
-
+            id_global = dr["music_id"].ToString();
+            UpdateStatusLove(dr["music_id"].ToString());
         }
         private void openChildForm(Form childForm)
         {
@@ -56,11 +60,28 @@ namespace MusicPlayer
             childForm.BringToFront();
             childForm.Show();
         }
+
         private void cButton1_Click(object sender, EventArgs e)
         {
+            DataRow dr = dt_global.Rows[0];
             openChildForm(new PlayMusic(dt_global));
+            countNumOfView = Convert.ToInt32(dr["music_freq"]);
+            countNumOfView++;
+            CountView(id_global);
+            label_danhgia.Text = countNumOfView.ToString();
+            // Update history
+
+            string query = $"insert into HISTORY_MUSIC_LIST values('{id_global}', '{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}')";
+            DataProvider provider = new DataProvider();
+            provider.ExecuteNonQuery(query);
         }
 
+        private void CountView(string id)
+        {
+            DataProvider provider = new DataProvider();
+            string query = $"update MUSIC set music_freq = {countNumOfView} where music_id = '{id_global}'";
+            provider.ExecuteNonQuery(query);
+        }
         private void cButton2_Click(object sender, EventArgs e)
         {
             DataRow dr = dt_global.Rows[0];
@@ -117,6 +138,57 @@ namespace MusicPlayer
             if (status == "1") status = "0";
             else status = "1";
             UpdateStatusLove(dr["music_id"].ToString());
+        }
+
+        private void b1_MouseEnter(object sender, EventArgs e)
+        {
+            IconButton btn = (IconButton)sender;
+            string numberStar = btn.Name.Substring(1);
+
+            foreach (IconButton item in flowLayoutPanel1.Controls)
+            {
+                if (Convert.ToInt16(item.Name.Substring(1)) <= Convert.ToInt16(numberStar))
+                    item.IconColor = Color.Red;
+                else
+                    item.IconColor = Color.Black;
+            }
+        }
+
+        private void b1_MouseLeave(object sender, EventArgs e)
+        {
+            IconButton btn = (IconButton)sender;
+            LoadStars(id_global);
+        }
+
+        private void LoadStars(string id)
+        {
+            DataProvider provider = new DataProvider();
+            string query = $"select [music_stars] from MUSIC where music_id = '{id}'";
+            DataTable dt = provider.ExecuteQuery(query);
+
+            DataRow dr = dt.Rows[0];
+
+            string numberStar = dr["music_stars"].ToString();
+
+            foreach (IconButton item in flowLayoutPanel1.Controls)
+            {
+                if (Convert.ToInt16(item.Name.Substring(1)) <= Convert.ToInt16(numberStar))
+                    item.IconColor = Color.Red;
+                else
+                    item.IconColor = Color.Black;
+            }
+
+            label_danhgia.Text = dr["music_stars"].ToString() + "/5";
+        }
+
+        private void b1_Click(object sender, EventArgs e)
+        {
+            IconButton btn = (IconButton)sender;
+            DataProvider provider = new DataProvider();
+            string query = $"update MUSIC set music_stars = {btn.Name.Substring(1)} where music_id = '{id_global}'";
+            provider.ExecuteNonQuery(query);
+            MessageBox.Show("Đánh giá thành công!");
+            LoadStars(id_global);
         }
     }
 }

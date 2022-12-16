@@ -178,9 +178,15 @@ namespace MusicPlayer
             ShowAllMusic(query);
         }
 
-        private void Filter(string country)
+        private void FilterCountry(string country)
         {
-            string query = $"select * from MUSIC where music_category like N'{country}'";
+            string query = $"select * from MUSIC where music_country like N'{country}'";
+            ShowAllMusic(query);
+        }
+
+        private void FilterCategory(string category)
+        {
+            string query = $"select * from MUSIC where music_category like N'{category}'";
             ShowAllMusic(query);
         }
 
@@ -268,11 +274,13 @@ namespace MusicPlayer
         private void iconButton4_Click(object sender, EventArgs e)
         {
             CloseForm();
+            openChildForm(new ListLove());
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
             CloseForm();
+            openChildForm(new FormHistory());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -283,27 +291,27 @@ namespace MusicPlayer
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Filter("US/UK");
+            FilterCountry("US/UK");
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Filter("vietnam");
+            FilterCountry("vietnam");
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Filter("rap");
+            FilterCategory("rap");
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Filter("pop");
+            FilterCategory("pop");
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Filter("remix");
+            FilterCategory("remix");
         }
     }
 }
