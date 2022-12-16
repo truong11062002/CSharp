@@ -70,5 +70,15 @@ namespace MusicPlayer.CustomControl
             DataTable dtShowMovieDetail = provider.ExecuteQuery(query);
             openChildForm(new DetailMusic(bm1, dtShowMovieDetail));
         }
+
+        private void item_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.MediumPurple;
+        }
+
+        private void item_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Aquamarine;
+        }
     }
 }

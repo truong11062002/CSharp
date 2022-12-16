@@ -22,3 +22,7 @@ C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.Re
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.PlayMusic.resources
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.ListLove.resources
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.love.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.PlayListMusic.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.history.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.history_freq.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.FormHistory.resources
