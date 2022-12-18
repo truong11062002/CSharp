@@ -68,6 +68,9 @@ namespace MusicPlayer
             this.label_tennhac = new System.Windows.Forms.Label();
             this.cButton2 = new MusicPlayer.CustomControl.CButton();
             this.cButton1 = new MusicPlayer.CustomControl.CButton();
+            this.panel_playlist = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel_listPL = new System.Windows.Forms.FlowLayoutPanel();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.music_pictureBox)).BeginInit();
@@ -77,6 +80,7 @@ namespace MusicPlayer
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel_playlist.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,6 +120,7 @@ namespace MusicPlayer
             this.iconButton8.TabIndex = 2;
             this.iconButton8.Text = "Thêm Playlist";
             this.iconButton8.UseVisualStyleBackColor = false;
+            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
             // 
             // iconButton2
             // 
@@ -556,12 +561,46 @@ namespace MusicPlayer
             this.cButton1.UseVisualStyleBackColor = false;
             this.cButton1.Click += new System.EventHandler(this.cButton1_Click);
             // 
+            // panel_playlist
+            // 
+            this.panel_playlist.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel_playlist.Controls.Add(this.iconButton4);
+            this.panel_playlist.Controls.Add(this.flowLayoutPanel_listPL);
+            this.panel_playlist.Location = new System.Drawing.Point(201, 113);
+            this.panel_playlist.Name = "panel_playlist";
+            this.panel_playlist.Size = new System.Drawing.Size(770, 448);
+            this.panel_playlist.TabIndex = 5;
+            this.panel_playlist.Visible = false;
+            // 
+            // flowLayoutPanel_listPL
+            // 
+            this.flowLayoutPanel_listPL.AutoScroll = true;
+            this.flowLayoutPanel_listPL.Location = new System.Drawing.Point(24, 81);
+            this.flowLayoutPanel_listPL.Name = "flowLayoutPanel_listPL";
+            this.flowLayoutPanel_listPL.Size = new System.Drawing.Size(713, 339);
+            this.flowLayoutPanel_listPL.TabIndex = 0;
+            this.flowLayoutPanel_listPL.Visible = false;
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(687, 18);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(50, 50);
+            this.iconButton4.TabIndex = 15;
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
             // DetailMusic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1224, 681);
+            this.Controls.Add(this.panel_playlist);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "DetailMusic";
@@ -579,6 +618,7 @@ namespace MusicPlayer
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel_playlist.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -624,5 +664,8 @@ namespace MusicPlayer
         private System.Windows.Forms.Label label_danhgia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel_playlist;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_listPL;
+        private FontAwesome.Sharp.IconButton iconButton4;
     }
 }

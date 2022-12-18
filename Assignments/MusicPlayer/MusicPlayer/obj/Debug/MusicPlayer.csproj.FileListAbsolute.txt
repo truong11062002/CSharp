@@ -26,3 +26,6 @@ C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.PlayListM
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.history.resources
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.history_freq.resources
 C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.FormHistory.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.music.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.playlist.resources
+C:\CS511.N11\Assignments\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.CustomControl.choosePlayList.resources

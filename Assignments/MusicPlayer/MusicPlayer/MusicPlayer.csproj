@@ -59,6 +59,12 @@
     <Compile Include="CustomControl\CButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControl\choosePlayList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\choosePlayList.Designer.cs">
+      <DependentUpon>choosePlayList.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\history.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +88,18 @@
     </Compile>
     <Compile Include="CustomControl\love.Designer.cs">
       <DependentUpon>love.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\music.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\music.Designer.cs">
+      <DependentUpon>music.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\playlist.Designer.cs">
+      <DependentUpon>playlist.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DetailMusic.cs">
@@ -128,6 +146,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Variables\ListFormPanel.cs" />
+    <EmbeddedResource Include="CustomControl\choosePlayList.resx">
+      <DependentUpon>choosePlayList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\history.resx">
       <DependentUpon>history.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\love.resx">
       <DependentUpon>love.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\music.resx">
+      <DependentUpon>music.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\playlist.resx">
+      <DependentUpon>playlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailMusic.resx">
       <DependentUpon>DetailMusic.cs</DependentUpon>
@@ -297,6 +324,24 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg05.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

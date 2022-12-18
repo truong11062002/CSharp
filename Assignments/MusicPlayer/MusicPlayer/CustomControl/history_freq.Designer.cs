@@ -33,8 +33,8 @@ namespace MusicPlayer.CustomControl
             this.label_tennhac = new System.Windows.Forms.Label();
             this.label_tencasi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_luotxem = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,14 +80,6 @@ namespace MusicPlayer.CustomControl
             this.label2.TabIndex = 6;
             this.label2.Text = "Lượt xem:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(53, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 128);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label_luotxem
             // 
             this.label_luotxem.AutoSize = true;
@@ -98,6 +90,14 @@ namespace MusicPlayer.CustomControl
             this.label_luotxem.Size = new System.Drawing.Size(21, 24);
             this.label_luotxem.TabIndex = 7;
             this.label_luotxem.Text = "0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(53, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 128);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // history_freq
             // 
@@ -110,7 +110,7 @@ namespace MusicPlayer.CustomControl
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_num);
             this.Name = "history_freq";
-            this.Size = new System.Drawing.Size(380, 150);
+            this.Size = new System.Drawing.Size(357, 150);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

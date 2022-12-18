@@ -63,6 +63,56 @@ namespace MusicPlayer {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lg01 {
+            get {
+                object obj = ResourceManager.GetObject("lg01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lg02 {
+            get {
+                object obj = ResourceManager.GetObject("lg02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lg03 {
+            get {
+                object obj = ResourceManager.GetObject("lg03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lg04 {
+            get {
+                object obj = ResourceManager.GetObject("lg04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lg05 {
+            get {
+                object obj = ResourceManager.GetObject("lg05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mv01 {
             get {
                 object obj = ResourceManager.GetObject("mv01", resourceCulture);
@@ -356,6 +406,16 @@ namespace MusicPlayer {
         internal static System.Drawing.Bitmap mv30 {
             get {
                 object obj = ResourceManager.GetObject("mv30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mv31 {
+            get {
+                object obj = ResourceManager.GetObject("mv31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
