@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,11 +24,11 @@ namespace MusicPlayer
         int countNumOfView;
         public DetailMusic()
         {
-            InitializeComponent();
         }
 
         public DetailMusic(Bitmap bm, DataTable dt) : this()
         {
+            InitializeComponent();
             dt_global = dt;
             DataRow dr = dt.Rows[0];
 
@@ -45,6 +46,7 @@ namespace MusicPlayer
             richTextBox_loibaihat.Text = dr["music_lyric"].ToString();
             id_global = dr["music_id"].ToString();
             UpdateStatusLove(dr["music_id"].ToString());
+            Load_MyPlayList();
         }
         private void openChildForm(Form childForm)
         {
@@ -66,8 +68,7 @@ namespace MusicPlayer
             DataRow dr = dt_global.Rows[0];
             openChildForm(new PlayMusic(dt_global));
             countNumOfView = Convert.ToInt32(dr["music_freq"]);
-            countNumOfView++;
-            CountView(id_global);
+            CountView(id_global, countNumOfView++);
             label_danhgia.Text = countNumOfView.ToString();
             // Update history
 
@@ -76,10 +77,10 @@ namespace MusicPlayer
             provider.ExecuteNonQuery(query);
         }
 
-        private void CountView(string id)
+        private void CountView(string id, int count)
         {
             DataProvider provider = new DataProvider();
-            string query = $"update MUSIC set music_freq = {countNumOfView} where music_id = '{id_global}'";
+            string query = $"update MUSIC set music_freq = {count} where music_id = '{id}'";
             provider.ExecuteNonQuery(query);
         }
         private void cButton2_Click(object sender, EventArgs e)
@@ -189,6 +190,47 @@ namespace MusicPlayer
             provider.ExecuteNonQuery(query);
             MessageBox.Show("Đánh giá thành công!");
             LoadStars(id_global);
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.panel_playlist.Visible = true;
+            this.flowLayoutPanel_listPL.Visible = true;
+        }
+
+        private void Load_MyPlayList()
+        {
+            string query = "SELECT * FROM PLAYLIST";
+
+            DataProvider provider = new DataProvider();
+            DataTable dtShowMyList = provider.ExecuteQuery(query);
+
+            ResourceManager rm;
+            if (dtShowMyList.Rows.Count > 0)
+            {
+                foreach (DataRow row in dtShowMyList.Rows)
+                {
+                    rm = image.ResourceManager;
+                    Bitmap myImage = (Bitmap)rm.GetObject(row["playlist_logo"].ToString());
+
+                    CustomControl.choosePlayList item = new CustomControl.choosePlayList(
+                        myImage,
+                        row,
+                        id_global
+                    );
+                    flowLayoutPanel_listPL.Controls.Add(item);
+                }
+            }
+            else
+            {
+                //rm = CreateResources.Variables.rm_logo;
+                //FlowLayoutPanel_OrderProduct.BackgroundImage = (Bitmap)rm.GetObject("No_product");
+            }
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.panel_playlist.Visible = false;
         }
     }
 }

@@ -42,20 +42,20 @@ namespace MusicPlayer
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(19, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 38);
+            this.label1.Size = new System.Drawing.Size(585, 38);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Danh sách lịch sử nghe nhạc";
+            this.label1.Text = "DANH SÁCH LỊCH SỬ NGHE NHẠC";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(836, 9);
+            this.label2.Location = new System.Drawing.Point(773, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 38);
+            this.label2.Size = new System.Drawing.Size(421, 38);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Bài hát thường nghe";
+            this.label2.Text = "BÀI HÁT THƯỜNG NGHE";
             // 
             // flowLayoutPanel_history
             // 

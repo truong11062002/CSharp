@@ -256,6 +256,9 @@ namespace MusicPlayer
         {
             if (Application.OpenForms.OfType<PlayMusic>().Count() == 1)
                 Application.OpenForms.OfType<PlayMusic>().First().Close();
+
+            if (Application.OpenForms.OfType<PlayListMusic>().Count() == 1)
+                Application.OpenForms.OfType<PlayListMusic>().First().Close();
         }
         private void ResetHomePage(string query, Button btn = null)
         {
@@ -269,6 +272,7 @@ namespace MusicPlayer
         private void iconButton3_Click(object sender, EventArgs e)
         {
             CloseForm();
+            openChildForm(new PlayListMusic());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)

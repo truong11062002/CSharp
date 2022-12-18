@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,13 @@ namespace MusicPlayer
         {
             DataRow dr = dt.Rows[0];
 
-            axWindowsMediaPlayer.URL = "MusicData/" + dr["music_id"] + ".mp3";
+            if (File.Exists("MusicData/" + dr["music_id"].ToString() + ".mp4"))
+            {
+                axWindowsMediaPlayer.URL = "MusicData/" + dr["music_id"].ToString() + ".mp4";
+            }
+            else
+                axWindowsMediaPlayer.URL = "MusicData/" + dr["music_id"].ToString() + ".mp3";
+
             axWindowsMediaPlayer.Ctlcontrols.play();
 
             label_tennhac.Text = dr["music_name"].ToString();
