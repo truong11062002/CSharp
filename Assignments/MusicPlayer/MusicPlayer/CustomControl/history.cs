@@ -15,6 +15,7 @@ namespace MusicPlayer.CustomControl
     {
         private Form activeForm = null;
         string id_history_global;
+        
         public history()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace MusicPlayer.CustomControl
             label_tencasi.Text = dr["singer_name"].ToString();
             label_thoigian.Text = dr["history_music_time"].ToString();
             id_history_global = dr["history_music_id"].ToString();
+            pictureBox1.Name = dr["music_id"].ToString();
         }
 
         private void openChildForm(Form childForm)
@@ -55,6 +57,16 @@ namespace MusicPlayer.CustomControl
 
             provider.ExecuteNonQuery(query);
             openChildForm(new FormHistory());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Bitmap myImage = (Bitmap)image.ResourceManager.GetObject(pictureBox1.Name);
+
+            DataProvider provider = new DataProvider();
+            string query = $"select * from MUSIC where music_id = '{pictureBox1.Name}'";
+            DataTable dt = provider.ExecuteQuery(query);
+            openChildForm(new DetailMusic(myImage, dt));
         }
     }
 }

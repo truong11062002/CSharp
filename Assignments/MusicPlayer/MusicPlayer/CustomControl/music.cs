@@ -38,11 +38,6 @@ namespace MusicPlayer.CustomControl
                 label_num.Text = num.ToString();
         }
 
-        private void label_ngaythemvao_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -133,5 +128,14 @@ namespace MusicPlayer.CustomControl
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Bitmap myImage = (Bitmap)image.ResourceManager.GetObject(music_id);
+
+            DataProvider provider = new DataProvider();
+            string query = $"select * from MUSIC where music_id = '{music_id}'";
+            DataTable dt = provider.ExecuteQuery(query);
+            openChildForm(new DetailMusic(myImage, dt));
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace MusicPlayer
 
         private void Load_MyHistoryList()
         {
-            string query = "SELECT [history_music_id], [music_name], [singer_name], [history_music_time] FROM HISTORY_MUSIC_LIST inner join MUSIC on history_music_id = music_id order by history_music_time desc";
+            string query = "SELECT [music_id], [history_music_id], [music_name], [singer_name], [history_music_time] FROM HISTORY_MUSIC_LIST inner join MUSIC on history_music_id = music_id order by history_music_time desc";
 
             DataProvider provider = new DataProvider();
             DataTable dtShowMyList = provider.ExecuteQuery(query);
