@@ -46,6 +46,7 @@ namespace MusicPlayer.CustomControl
             this.label_num.Size = new System.Drawing.Size(51, 44);
             this.label_num.TabIndex = 0;
             this.label_num.Text = "01";
+            this.label_num.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label_tennhac
             // 
@@ -57,6 +58,7 @@ namespace MusicPlayer.CustomControl
             this.label_tennhac.Size = new System.Drawing.Size(99, 24);
             this.label_tennhac.TabIndex = 4;
             this.label_tennhac.Text = "Tên nhạc";
+            this.label_tennhac.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label_tencasi
             // 
@@ -68,6 +70,7 @@ namespace MusicPlayer.CustomControl
             this.label_tencasi.Size = new System.Drawing.Size(96, 24);
             this.label_tencasi.TabIndex = 5;
             this.label_tencasi.Text = "Tên ca sĩ";
+            this.label_tencasi.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -79,6 +82,7 @@ namespace MusicPlayer.CustomControl
             this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Lượt xem:";
+            this.label2.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label_luotxem
             // 
@@ -90,6 +94,7 @@ namespace MusicPlayer.CustomControl
             this.label_luotxem.Size = new System.Drawing.Size(21, 24);
             this.label_luotxem.TabIndex = 7;
             this.label_luotxem.Text = "0";
+            this.label_luotxem.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox1
             // 
@@ -98,6 +103,7 @@ namespace MusicPlayer.CustomControl
             this.pictureBox1.Size = new System.Drawing.Size(122, 128);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // history_freq
             // 
@@ -111,6 +117,7 @@ namespace MusicPlayer.CustomControl
             this.Controls.Add(this.label_num);
             this.Name = "history_freq";
             this.Size = new System.Drawing.Size(357, 150);
+            this.Click += new System.EventHandler(this.pictureBox1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

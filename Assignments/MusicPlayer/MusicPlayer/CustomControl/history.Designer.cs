@@ -34,8 +34,8 @@ namespace MusicPlayer.CustomControl
             this.label_tennhac = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_thoigian = new System.Windows.Forms.Label();
-            this.cButton1 = new MusicPlayer.CustomControl.CButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cButton1 = new MusicPlayer.CustomControl.CButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@ namespace MusicPlayer.CustomControl
             this.label_tencasi.Size = new System.Drawing.Size(111, 29);
             this.label_tencasi.TabIndex = 4;
             this.label_tencasi.Text = "Tên ca sĩ";
+            this.label_tencasi.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label_tennhac
             // 
@@ -60,6 +61,7 @@ namespace MusicPlayer.CustomControl
             this.label_tennhac.Size = new System.Drawing.Size(141, 32);
             this.label_tennhac.TabIndex = 3;
             this.label_tennhac.Text = "Tên nhạc";
+            this.label_tennhac.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -71,6 +73,7 @@ namespace MusicPlayer.CustomControl
             this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Thời gian: ";
+            this.label1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label_thoigian
             // 
@@ -82,6 +85,16 @@ namespace MusicPlayer.CustomControl
             this.label_thoigian.Size = new System.Drawing.Size(103, 29);
             this.label_thoigian.TabIndex = 6;
             this.label_thoigian.Text = "00:00:00";
+            this.label_thoigian.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 149);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cButton1
             // 
@@ -103,14 +116,6 @@ namespace MusicPlayer.CustomControl
             this.cButton1.UseVisualStyleBackColor = false;
             this.cButton1.Click += new System.EventHandler(this.cButton1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 149);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // history
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -124,6 +129,7 @@ namespace MusicPlayer.CustomControl
             this.Controls.Add(this.pictureBox1);
             this.Name = "history";
             this.Size = new System.Drawing.Size(715, 167);
+            this.Click += new System.EventHandler(this.pictureBox1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
