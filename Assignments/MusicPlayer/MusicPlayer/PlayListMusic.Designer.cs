@@ -35,17 +35,21 @@ namespace MusicPlayer
             this.flowLayoutPanel_music = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label_soluongLP = new System.Windows.Forms.Label();
+            this.panel_taomoi = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox_name_playlist = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox_Image = new System.Windows.Forms.ComboBox();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.panel_taomoi = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_taomoi.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,6 +112,115 @@ namespace MusicPlayer
             this.label_soluongLP.TabIndex = 9;
             this.label_soluongLP.Text = "0";
             // 
+            // panel_taomoi
+            // 
+            this.panel_taomoi.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel_taomoi.Controls.Add(this.pictureBox1);
+            this.panel_taomoi.Controls.Add(this.comboBox_Image);
+            this.panel_taomoi.Controls.Add(this.label4);
+            this.panel_taomoi.Controls.Add(this.iconButton4);
+            this.panel_taomoi.Controls.Add(this.label6);
+            this.panel_taomoi.Controls.Add(this.iconButton3);
+            this.panel_taomoi.Controls.Add(this.panel2);
+            this.panel_taomoi.Controls.Add(this.label5);
+            this.panel_taomoi.Location = new System.Drawing.Point(260, 67);
+            this.panel_taomoi.Name = "panel_taomoi";
+            this.panel_taomoi.Size = new System.Drawing.Size(682, 565);
+            this.panel_taomoi.TabIndex = 10;
+            this.panel_taomoi.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label6.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label6.Location = new System.Drawing.Point(149, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(379, 38);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "TẠO PLAYLIST NHẠC";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox_name_playlist);
+            this.panel2.Location = new System.Drawing.Point(183, 148);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(314, 51);
+            this.panel2.TabIndex = 11;
+            // 
+            // textBox_name_playlist
+            // 
+            this.textBox_name_playlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_name_playlist.Location = new System.Drawing.Point(3, 9);
+            this.textBox_name_playlist.Name = "textBox_name_playlist";
+            this.textBox_name_playlist.Size = new System.Drawing.Size(308, 38);
+            this.textBox_name_playlist.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(31, 166);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 25);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Tên Playlist";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(31, 242);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(220, 25);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Chọn ảnh cho playlist";
+            // 
+            // comboBox_Image
+            // 
+            this.comboBox_Image.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.comboBox_Image.FormattingEnabled = true;
+            this.comboBox_Image.Items.AddRange(new object[] {
+            "Image 01",
+            "Image 02",
+            "Image 03",
+            "Image 04",
+            "Image 05"});
+            this.comboBox_Image.Location = new System.Drawing.Point(287, 233);
+            this.comboBox_Image.Name = "comboBox_Image";
+            this.comboBox_Image.Size = new System.Drawing.Size(158, 39);
+            this.comboBox_Image.TabIndex = 16;
+            this.comboBox_Image.Text = "Image 01";
+            this.comboBox_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_Image_SelectedIndexChanged);
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(629, 3);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(50, 50);
+            this.iconButton4.TabIndex = 14;
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.Location = new System.Drawing.Point(209, 501);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(254, 61);
+            this.iconButton3.TabIndex = 12;
+            this.iconButton3.Text = "Tạo mới";
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
             // iconButton2
             // 
             this.iconButton2.BackColor = System.Drawing.Color.Red;
@@ -121,6 +234,7 @@ namespace MusicPlayer
             this.iconButton2.TabIndex = 8;
             this.iconButton2.Text = "Xóa playlist";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -137,83 +251,15 @@ namespace MusicPlayer
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // panel_taomoi
+            // pictureBox1
             // 
-            this.panel_taomoi.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel_taomoi.Controls.Add(this.iconButton4);
-            this.panel_taomoi.Controls.Add(this.label6);
-            this.panel_taomoi.Controls.Add(this.iconButton3);
-            this.panel_taomoi.Controls.Add(this.panel2);
-            this.panel_taomoi.Controls.Add(this.label5);
-            this.panel_taomoi.Location = new System.Drawing.Point(260, 67);
-            this.panel_taomoi.Name = "panel_taomoi";
-            this.panel_taomoi.Size = new System.Drawing.Size(682, 565);
-            this.panel_taomoi.TabIndex = 10;
-            this.panel_taomoi.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 166);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Tên Playlist";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(183, 148);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(314, 51);
-            this.panel2.TabIndex = 11;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 38);
-            this.textBox1.TabIndex = 0;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(209, 501);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(254, 61);
-            this.iconButton3.TabIndex = 12;
-            this.iconButton3.Text = "Tạo mới";
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label6.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(149, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(392, 39);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "TẠO PLAYLIST NHẠC";
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(629, 3);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(50, 50);
-            this.iconButton4.TabIndex = 14;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.pictureBox1.BackgroundImage = global::MusicPlayer.image.lg06;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(204, 307);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 145);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // PlayListMusic
             // 
@@ -236,6 +282,7 @@ namespace MusicPlayer
             this.panel_taomoi.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,8 +302,11 @@ namespace MusicPlayer
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_name_playlist;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton iconButton4;
+        private System.Windows.Forms.ComboBox comboBox_Image;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
