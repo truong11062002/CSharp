@@ -15,6 +15,7 @@ namespace MusicPlayer.CustomControl
     public partial class playlist : UserControl
     {
         private DataTable dtShowMyList = null;
+        private bool isClicked = false;
         public playlist()
         {
             
@@ -34,7 +35,18 @@ namespace MusicPlayer.CustomControl
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            isClicked = !isClicked;
+            if (isClicked)
+            {
+                BackColor = Color.AliceBlue;
+            }
+            else
+            {
+                BackColor = Color.Gray;
+            }
             Load_MusicInPlaylist();
+            Variables.globalVariable.Select_playlist = pictureBox1.Name;
+            
         }
 
 
@@ -73,6 +85,11 @@ namespace MusicPlayer.CustomControl
             DataProvider provider = new DataProvider();
             DataTable dt = provider.ExecuteQuery(query);
             return dt;
+        }
+
+        private void playlist_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

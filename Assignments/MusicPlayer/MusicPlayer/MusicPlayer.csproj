@@ -145,6 +145,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables\globalVariable.cs" />
     <Compile Include="Variables\ListFormPanel.cs" />
     <EmbeddedResource Include="CustomControl\choosePlayList.resx">
       <DependentUpon>choosePlayList.cs</DependentUpon>
@@ -342,6 +343,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lg05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg06.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

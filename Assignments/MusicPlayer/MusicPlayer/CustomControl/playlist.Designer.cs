@@ -83,13 +83,14 @@ namespace MusicPlayer.CustomControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.label_soluongphim);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label_name_playlist);
             this.Controls.Add(this.pictureBox1);
             this.Name = "playlist";
             this.Size = new System.Drawing.Size(349, 269);
+            this.Load += new System.EventHandler(this.playlist_Load);
             this.Click += new System.EventHandler(this.pictureBox1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

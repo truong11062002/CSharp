@@ -68,7 +68,7 @@ namespace MusicPlayer
             DataRow dr = dt_global.Rows[0];
             openChildForm(new PlayMusic(dt_global));
             countNumOfView = Convert.ToInt32(dr["music_freq"]);
-            CountView(id_global, countNumOfView++);
+            CountView(id_global, ++countNumOfView);
             label_danhgia.Text = countNumOfView.ToString();
             // Update history
 
