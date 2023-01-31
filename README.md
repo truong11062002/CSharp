@@ -5,7 +5,7 @@
 </p>
 
 <!-- Title -->
-<h1 align="center"><b>CS511.N11 Ngôn ngữ lập trình C#</b></h1>
+<h1 align="center"><b>Ngôn ngữ lập trình C#</b></h1>
 
 
 
