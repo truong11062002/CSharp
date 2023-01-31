@@ -18,8 +18,6 @@
 ## GIỚI THIỆU MÔN HỌC
 <a name="gioithieumonhoc"></a>
 * **Tên môn học**: Ngôn ngữ lập trình C#
-* **Mã môn học**: CS511
-* **Lớp học**: CS511.N11
 * **Ngày bắt đầu**: 05/09/2022
 * **Ngày kết thúc**: 24/12/2022
 * **Năm học**: 2022-2023
@@ -63,16 +61,12 @@ Mô tả yêu cầu:
 ### 3. Quá trình trên lớp
 [Thiết kế giao diện theo mẫu](https://github.com/truong11062002/CS511.N11/tree/main/Assignments/week01)
 
-## GIẢNG VIÊN HƯỚNG DẪN
-<a name="giangvien"></a>
-* ThS. **Nguyễn Bích Vân** - *vannb@uit.edu.vn*
 
 ## THÀNH VIÊN NHÓM
 <a name="thanhvien"></a>
 | STT    | MSSV          | Họ và Tên              | Github                                               | Email                   |
 | ------ |:-------------:| ----------------------:|-----------------------------------------------------:|-------------------------:
 | 1      | 20522087      | Nguyễn Nhật Trường     |https://github.com/truong11062002                     |20522087@gm.uit.edu.vn   |
-| 2      | 20520481      | Lê Trương Ngọc Hải     |https://github.com/letruongngochai                    |20520481@gm.uit.edu.vn   |
 ## ĐỒ ÁN MÔN HỌC
 <a name="doan"></a>
 1. Tên đồ án: Updating...
