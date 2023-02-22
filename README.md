@@ -69,7 +69,6 @@ Mô tả yêu cầu:
 | 1      | 20522087      | Nguyễn Nhật Trường     |https://github.com/truong11062002                     |20522087@gm.uit.edu.vn   |
 ## ĐỒ ÁN MÔN HỌC
 <a name="doan"></a>
-1. Tên đồ án: Updating...
-## DEMO ĐỒ ÁN
+1. TÊN ĐỒ ÁN: MUSIC PLAYER
 
 
